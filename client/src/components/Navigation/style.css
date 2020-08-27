@@ -96,7 +96,7 @@ a.nav-link {
 }
 
 
-@media (max-width:667px) {
+/* @media (max-width:667px) {
     .justify-content-center.navbar-nav {
         display:none;
     }
@@ -104,6 +104,6 @@ a.nav-link {
     .fixed-top {
         height:75px;
     }
-}
+} */
 
 

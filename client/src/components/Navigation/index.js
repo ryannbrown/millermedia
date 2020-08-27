@@ -43,10 +43,10 @@ export default class Navigation extends Component {
  
       <div>
      <Navbar fixed="top" bg="light" expand="lg">
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Brand href="#home">
     <Image src={logo} width="300px"></Image>
   </Navbar.Brand>
-  <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="">
       <Nav.Link href="/">Home</Nav.Link>
