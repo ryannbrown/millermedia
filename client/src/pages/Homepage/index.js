@@ -49,10 +49,7 @@ export default class Homepage extends Component {
 
             <div>
                 <HomeHero></HomeHero>
-                <div style={{
-                    width: `980px`,
-                    margin: `0px auto`
-                }}>
+                <div className="home-wrapper">
                     <HomeQuote></HomeQuote>
                     <HomeAbout></HomeAbout>
                     <HomePackage></HomePackage>

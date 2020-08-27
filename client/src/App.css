@@ -7,6 +7,11 @@
   font-family: 'adelle';
 } */
 
+html {
+  scroll-behavior:smooth;
+  margin-right:-5px;
+}
+
 
 .light {
   font-family: 'adelle-ultrathin';
@@ -17,7 +22,7 @@ font-style: normal;
 .App {
   text-align: center;
   /* width:100%; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 h1, h2 {
