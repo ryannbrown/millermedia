@@ -1,16 +1,18 @@
-import { Container, Nav, Button, Image, Row, Col } from 'react-bootstrap'
-import Navbar from 'react-bootstrap/Navbar'
+
+import { Container, Nav, Button, Image } from 'react-bootstrap'
+import { Navbar, NavDropdown } from 'react-bootstrap'
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import HomeHero from "../../components/HomeHero/index"
-import HomeBio from "../../components/HomeBio/index"
-import HomeAction from "../../components/HomeAction/index"
-import HomeQuote from "../../components/HomeQuote/index"
 import './style.css';
+import { Drawer } from '@material-ui/core';
+import HomeHero from './components/hero'
+import HomeQuote from './components/homequote'
+import HomeAbout from './components/homeabout'
+import HomePackage from './components/homepackage'
+import HomeOfferings from './components/homeofferings'
+import Footer from '../../components/Footer/footer'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
-
+import logo from '../../media/logo.png'
 
 export default class Homepage extends Component {
 
@@ -20,40 +22,50 @@ export default class Homepage extends Component {
         this.listener = null;
         this.state = {
             status: "top",
-            isMobile: false,
-           height: '100vh'
+            isMobile: false
         };
     }
 
+
     componentDidMount() {
-        let height = window.innerHeight + 'px';
-        console.log(height)
-  
 
 
-        this.setState({
-            height: height
-        })
-        window.addEventListener('resize', () => {
-            let height = window.innerHeight + 'px';
-            console.log(height)
-            this.setState({
-                height: height
-            })
-     
-          });
     }
 
+    componentDidUpdate() {
+        document.removeEventListener("scroll", this.listener);
 
+
+
+    }
 
     render() {
+
+        const { isMobile } = this.state;
+
+
+
         return (
-            <div className="homepage-content" style={{
-                // height: `20vh`, /* Fallback for browsers that do not support Custom Properties */
-                height: `${this.state.height}`
-            }}>
-                <HomeHero height={this.state.height}></HomeHero>
-            </div>
+
+            <div>
+                <HomeHero></HomeHero>
+                <div style={{
+                    width: `980px`,
+                    margin: `0px auto`
+                }}>
+                    <HomeQuote></HomeQuote>
+                    <HomeAbout></HomeAbout>
+                    <HomePackage></HomePackage>
+                    <HomeOfferings></HomeOfferings>
+                </div>
+                <Footer text="Have Questions?" button="LET'S CONNECT" link="/connect"></Footer>
+            </div >
         )
+
     }
 }
+
+
+
+
+

@@ -1,79 +1,69 @@
 
-// import { Container, Nav, Button, Image } from 'react-bootstrap'
-// import Navbar from 'react-bootstrap/Navbar'
-// import React, { Component } from 'react';
-// // import logo from './logo.svg';
-// import './style.css';
-// import { Drawer } from '@material-ui/core';
-// import TemporaryDrawer from '../Drawer/index'
+import { Container, Nav, Button, Image } from 'react-bootstrap'
+import {Navbar, NavDropdown} from 'react-bootstrap'
+import React, { Component } from 'react';
+// import logo from './logo.svg';
+import './style.css';
+import { Drawer } from '@material-ui/core';
 
-// import logo from '../../media/moons.png'
-// import whiteArrow from '../../media/white-arrow.png'
+import logo from '../../media/logo.png'
 
-// export default class Navigation extends Component {
+export default class Navigation extends Component {
 
-//   constructor(props) {
-//     super(props);
+  constructor(props) {
+    super(props);
 
-//     this.listener = null;
-//     this.state = {
-//       status: "top",
-//       isMobile: false
-//     };
-//   }
+    this.listener = null;
+    this.state = {
+      status: "top",
+      isMobile: false
+    };
+  }
 
 
-//   componentDidMount() {
+  componentDidMount() {
 
   
-//   }
+  }
 
-//   componentDidUpdate() {
-//     document.removeEventListener("scroll", this.listener);
-
-
-
-//   }
-
-//   render() {
-
-//     const { isMobile } = this.state;
+  componentDidUpdate() {
+    document.removeEventListener("scroll", this.listener);
 
 
 
-//     return (
-//       // <Navbar style={{padding:'0px'}}>
-//       //   <div className="nav-brand-box">
-//       //     <div className="menu-icon"><TemporaryDrawer></TemporaryDrawer></div>
-//       //     <div style={{backgroundColor: this.state.status ==="top" ? "transparent" : "rgba(217, 189, 189, 1)"}} className="title">
-//       //       <Navbar.Brand href="/">Kathryn Judy Brown</Navbar.Brand>
-//       //       <Navbar.Brand className="tagline" href="#home">Not your Mama's Healer</Navbar.Brand>
-//       //     </div>
+  }
 
-//       //   </div>
-//       // </Navbar>
+  render() {
 
-//       <div>
-//         <Navbar fixed="top" style={{ backgroundColor: this.state.status === "top" ? "transparent" : "#FFFFFF", transition: '.6s' }} className="title">
-//           <Nav className="justify-content-center" activeKey="/home">
-//             <Nav.Item className="cta-nav-btn">
-//               <a href="/contact">
-//                 <Button className="contact-btn-link">Contact us</Button>
-//               </a>
-//               {/* <a href="/offerings">
-//                 <Button className="offerings-btn-link" style={{ backgroundColor: this.state.status === "top" ? "#86BFFF" : "white", color: this.state.status === "top" ? "white" : "#86BFFF", transition: '.6s' }}>Subscribe</Button>
-//               </a> */}
-//             </Nav.Item>
-//             <Nav.Item className="nav-arrow">
-//               <Image style={{ display: this.state.status === "top" ? "none" : "flex", transition: '.6s' }} src={whiteArrow}></Image>
-//             </Nav.Item>
-//           </Nav>
-//         </Navbar>
-//       </div >
-//     )
+    const { isMobile } = this.state;
 
-//   }
-// }
+
+
+    return (
+ 
+      <div>
+     <Navbar fixed="top" bg="light" expand="lg">
+  <Navbar.Brand href="#home">
+    <Image src={logo} width="300px"></Image>
+  </Navbar.Brand>
+  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+  <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="">
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/about">About</Nav.Link>
+      <Nav.Link href="/services">Services</Nav.Link>
+      <Nav.Link href="/faq">FAQs</Nav.Link>
+      <Nav.Link href="/blog">Blog</Nav.Link>
+      <Nav.Link href="/contact">Contact</Nav.Link>
+      
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+      </div >
+    )
+
+  }
+}
 
 
 

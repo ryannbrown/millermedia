@@ -24,10 +24,24 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     color:black;
 }
 */
+
+
+
+
 .navbar-brand {
    padding-left: 3rem;
 } 
 
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right:10%;
+}
+
+a.nav-link {
+    float: left;
+}
 
 .nav {
     background-color:transparent !important;
@@ -40,25 +54,26 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 
 
 
-.justify-content-center.navbar-nav {
+/* .justify-content-center.navbar-nav {
     width: 100%;
-}
+    z-index:1050;
+} */
 
 
 .navbar-light .navbar-nav .nav-link {
-    color:#ffffff7a;
+    color:black;
     font-weight:400;
 }
 
 .navbar-light .navbar-nav .nav-link.active {
-    color:white;
+    color:gold;
     font-weight:400;
     opacity:1;
 }
 
 
 .nav-link:hover{
-    color: white !important;
+    color: gold !important;
 }
 
 .nav-link {
