@@ -5,12 +5,12 @@ import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './style.css';
 import { Drawer } from '@material-ui/core';
-import AboutHero from './components/hero'
+import Hero from '../../components/Hero'
 import AboutAction from './components/action'
 import Footer from '../../components/Footer/footer'
 import Team from './components/team'
 import logo from '../../media/logo.png'
-
+import heroImg from "../../media/boots.jpg"
 export default class About extends Component {
 
     constructor(props) {
@@ -45,7 +45,7 @@ export default class About extends Component {
         return (
 
             <div>
-                <AboutHero></AboutHero>
+                   <Hero image={heroImg} title="We're the Millers" paragraph1="We're a husband and wife team with a fire in our hearts for helping small to mid-sized businesses grow." paragraph2="We're not afraid to mix things up a bit. So, after two cross-country moves, several full-time jobs, and a dream to start our own business, we put our heads together and finally took the leap." button="GET TO KNOW US"/>
                 <div className="home-wrapper">
                     <Row className="flex-wrapper">
                         <Col>

@@ -3,16 +3,16 @@ import Navbar from 'react-bootstrap/Navbar'
 import React, {Component} from 'react';
 // import logo from './logo.svg';
 // import HomeHero from "../../components/HomeHero/index"
-import '../style.css';
+import './style.css';
 // import profPic from "../../media/5.PNG"
-import heroImg from "../../../media/boots.jpg"
-import arrow from "../../../media/white-arrow.png"
+// import heroImg from "../../../media/bread.jpg"
+import arrow from "../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
 
 
 
-export default class AboutHero extends Component {
+export default class ServicesHero extends Component {
 
     constructor(props) {
       super(props);
@@ -59,7 +59,7 @@ export default class AboutHero extends Component {
         {/* <Col md={3}></Col> */}
 
         <Col sm={12} md={12} className="home-img" style={{
-            backgroundImage: `url(${heroImg})`,
+            backgroundImage: `url(${this.props.image})`,
             backgroundColor: `#333333f2`,
             opacity: `90%`,
             backgroundBlendMode: `multiply`,
@@ -75,16 +75,16 @@ export default class AboutHero extends Component {
         }}>
             {/* <Image src={heroImg}></Image> */}
             <div className="tc w-100 hero-text-block">
-                <h1 className="hero-header">We're the Millers</h1>
-                <p className="hero-phrase">We're a husband and wife team with a fire in our hearts for helping small to mid-sized businesses grow.</p>
-                <p className="hero-phrase">We're not afraid to mix things up a bit. So, after two cross-country moves, several full-time jobs, and a dream to start our own business, we put our heads together and finally took the leap.</p>
+                <h1 className="hero-header">{this.props.title}</h1>
+                <p className="hero-phrase">{this.props.paragraph1}</p>
+                <p className="hero-phrase">{this.props.paragraph2}</p>
             </div>
 
        <br></br>
        {/* <div> */}
       
        <div className="arrow-container">
-       <p className="action-button">GET TO KNOW US</p>
+       <p className="action-button">{this.props.button}</p>
             <a onClick={this.scrollDown}><Image className="arrow-img center" src={arrow}></Image></a>
             </div>
        {/* </div> */}

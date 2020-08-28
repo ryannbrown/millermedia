@@ -14,6 +14,7 @@ import Navigation from "./components/Navigation/index"
 
 import Homepage from "./pages/Homepage/index"
 import About from "./pages/About/index"
+import Services from "./pages/Services/index"
 // import BlogPost from "./pages/BlogPost/index.js"
 // import Footer from "./components/Footer/index.js"
 // import Portfolio from "./components/Portfolio/index"
@@ -35,6 +36,7 @@ function App() {
          <Navigation/>
          <Router history = {history}>
            <Switch>
+             <Route path="/services" component={Services}/>
              <Route path="/about" component={About}/>
              <Route path="/" component={Homepage}/>
              {/* <Route path="/" component={Homepage}/> */}
