@@ -1,0 +1,121 @@
+
+.service-block {
+    display: flex;
+    width: 75%;
+    margin: 0px auto;
+}
+.ppc-text{
+    width:25%;
+    margin:0px auto;
+    text-align:left;
+}
+
+.service-block-logo {
+    transform:rotate(-35deg);
+    position:absolute;
+    left:30%;
+}
+
+.grey-div{
+    background-color:rgb(241, 242, 242);
+    height:400px;
+    width:150px;
+}
+.collage {
+    padding:25px;
+    text-align:left;
+    margin-top:-10%;
+}
+
+
+.collage-1 {
+    z-index:400;
+}
+.collage-2 {
+    z-index:500;
+    margin-left:-5%;
+    margin-top:25%;
+    border: 10px solid white;
+}
+
+.vertical-line-service {
+    position: absolute;
+    border-left: 1px solid rgba(210, 158, 17, 1);
+    height: 400px;
+    left: 15%;
+    z-index: 600;
+    bottom: -175vh;
+}
+
+.fb-text {
+    padding:50px;
+    width:50%;
+    margin:0px auto;
+    text-align:center;
+}
+
+.logo-branding-block {
+    height:800px;
+}
+
+.logo-branding-box {
+    position:relative;
+    background-color:rgb(241, 242, 242);
+    margin-top:-5% !important;
+    /* height:250px; */
+    width:50%;
+    margin:0px auto;
+    z-index:1000;
+}
+
+.logo-branding-text {
+    padding:25px;
+    margin:15px;
+}
+
+.logo-branding-text > * {
+    margin:10px;
+}
+
+
+.collage-two {
+    padding:25px;
+    text-align:right;
+    margin-top:-15%;
+    height:800px;
+
+}
+
+.collage-3 {
+    position:relative;
+    z-index:400;
+   
+    
+}
+.collage-4 {
+    position:relative;
+    z-index:600 !important;
+    border: 10px solid white;
+    margin-right:-5%;
+    margin-top:25%;
+}
+
+
+.vertical-line-service-2 {
+    position: relative;
+    border-left: 1px solid rgba(210, 158, 17, 1);
+    height: 800px;
+    width:20px;
+    left: 15%;
+    z-index: 600;
+    bottom: 75vh;
+}
+
+
+.service-block-logo-2 {
+    transform:rotate(35deg);
+    position:absolute;
+    margin-left:-22.5%;
+    margin-top:14%; 
+    z-index:1000;
+}

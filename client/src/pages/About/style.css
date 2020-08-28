@@ -84,7 +84,7 @@
  .about-lead-btn:hover {
  background-color:rgba(210, 158, 17, 1);
  border:none;
- text-align:left;
+ /* text-align:left; */
  }
 
 

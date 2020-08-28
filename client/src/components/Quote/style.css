@@ -1,0 +1,10 @@
+.quote-block {
+    color:#3F3F3F;
+    margin:100px auto;
+    width:50%;
+}
+
+.quote-block > h2 {
+    margin:10px auto;
+    font-size:1.5rem;
+}
