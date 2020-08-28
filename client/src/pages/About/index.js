@@ -66,7 +66,7 @@ export default class About extends Component {
                     <AboutAction></AboutAction>
                     <Team></Team>
                 </div>
-                <Footer text="Have Questions?" button="LET'S CONNECT" link="/connect"></Footer>
+                <Footer text="Like what you see?" button="CHECK OUT OUR SERVICES" link="/services"></Footer>
             </div >
         )
 
