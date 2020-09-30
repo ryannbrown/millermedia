@@ -4,7 +4,7 @@ import { Navbar, NavDropdown } from 'react-bootstrap'
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './style.css';
-import { Drawer } from '@material-ui/core';
+import { Divider, Drawer } from '@material-ui/core';
 import Hero from '../../components/Hero'
 import AboutAction from './components/action'
 import Footer from '../../components/Footer/footer'
@@ -44,24 +44,24 @@ export default class About extends Component {
 
         return (
 
-            <div>
+            <div className="about-page">
                    <Hero image={heroImg} title="We're the Millers" paragraph1="We're a husband and wife team with a fire in our hearts for helping small to mid-sized businesses grow." paragraph2="We're not afraid to mix things up a bit. So, after two cross-country moves, several full-time jobs, and a dream to start our own business, we put our heads together and finally took the leap." button="GET TO KNOW US"/>
                 <div className="home-wrapper">
                     <Row className="flex-wrapper">
-                        <Col>
+                        <div className="flex-item">
                             <h1 className="flex-above">HOME BASE</h1>
                             <p className="flex-below">Sarasota, FL</p>
-                        </Col>
+                        </div>
                         <hr></hr>
-                        <Col>
+                        <div className="flex-item">
                             <h1 className="flex-above">MARRIED</h1>
                             <p className="flex-below">March 2018</p>
-                        </Col>
+                        </div>
                         <hr></hr>
-                        <Col>
+                        <div className="flex-item">
                             <h1 className="flex-above">MILLER HOUNDS</h1>
                             <p className="flex-below">Finnegan</p>
-                        </Col>
+                        </div>
                     </Row>
                     <AboutAction></AboutAction>
                     <Team></Team>

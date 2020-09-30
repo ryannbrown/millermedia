@@ -125,7 +125,7 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
                         backgroundSize: `contain`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        height: `300px`,
+                        height: `275px`,
                         width: `225px`,
                         display: `flex`,
                         alignItems: `center`,
@@ -148,7 +148,7 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
                         backgroundSize: `contain`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        height: `300px`,
+                        height: `275px`,
                         width: `225px`,
                         display: `flex`,
                         alignItems: `center`,
@@ -172,11 +172,12 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
                         backgroundSize: `contain`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        height: `300px`,
+                        height: `275px`,
                         width: `225px`,
                         display: `flex`,
                         alignItems: `center`,
-                        position: `relative`
+                        position: `relative`,
+                        marginBottom:'100px'
                         //   cover no-repeat center center fixed`
                     }}>
                         <div className="hover-text">
