@@ -3,23 +3,30 @@
     display: flex;
     width: 75%;
     margin: 0px auto;
+    position:relative;
 }
 .ppc-text{
-    width:25%;
+    width:75%;
+    text-align:center;
     margin:0px auto;
-    text-align:left;
+}
+
+.ppc-text >h1 {
+    font-size:2.5rem;
 }
 
 .service-block-logo {
     transform:rotate(-35deg);
     position:absolute;
-    left:30%;
+top:-20%;
 }
 
 .grey-div{
+    position:absolute;
     background-color:rgb(241, 242, 242);
     height:400px;
     width:150px;
+    right:-15%;
 }
 .collage {
     padding:25px;
@@ -42,17 +49,23 @@
     position: absolute;
     border-left: 1px solid rgba(210, 158, 17, 1);
     height: 400px;
-    left: 15%;
+    left: 27%;
     z-index: 600;
-    bottom: -175vh;
+    bottom: -100vh;
 }
 
 .fb-text {
     padding:50px;
-    width:50%;
+    width:75%;
     margin:0px auto;
     text-align:center;
 }
+
+.fb-text > h1 {
+    padding:25px;
+}
+
+.fb-text
 
 .logo-branding-block {
     height:800px;
@@ -100,6 +113,15 @@
     margin-top:25%;
 }
 
+.vertical-line-service-1 {
+    position: absolute;
+    border-left: 1px solid rgba(210, 158, 17, 1);
+    height: 400px;
+    width:20px;
+    right: -15%;
+    z-index: 600;
+    top:-200px;
+}
 
 .vertical-line-service-2 {
     position: relative;

@@ -32,9 +32,7 @@ export default class ServiceBlock extends Component {
                         <a href="/ppc"><Button className="about-lead-btn" variant="outline-dark">ASK ABOUT PPC SERVICES</Button></a>
                     </div>
                     <div className="grey-div"></div>
-
-
-                    {/* <div className="vertical-line-about"></div> */}
+                    <div className="vertical-line-service-1"></div>
                 </div>
                 <div className="collage">
                     <Image className="collage-1" width='25%' src={lights}></Image>
