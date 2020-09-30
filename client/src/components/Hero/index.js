@@ -55,10 +55,10 @@ export default class ServicesHero extends Component {
   
       return (
       
-      <Row>
+      <div>
         {/* <Col md={3}></Col> */}
 
-        <Col sm={12} md={12} className="home-img" style={{
+        <div sm={12} md={12} className="home-img tc" style={{
             backgroundImage: `url(${this.props.image})`,
             backgroundColor: `#333333f2`,
             opacity: `90%`,
@@ -67,14 +67,16 @@ export default class ServicesHero extends Component {
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
-            height: `100vh`,
+            height: `85vh`,
             display: `flex`,
+            justifyContent:'center',
             alignItems: `center`,
-            position: `relative`
+            position: `relative`,
+            flexDirection: 'column'
             //   cover no-repeat center center fixed`
         }}>
             {/* <Image src={heroImg}></Image> */}
-            <div className="tc w-100 hero-text-block">
+            <div className="hero-text-block">
                 <h1 className="hero-header">{this.props.title}</h1>
                 <p className="hero-phrase">{this.props.paragraph1}</p>
                 <p className="hero-phrase">{this.props.paragraph2}</p>
@@ -83,9 +85,9 @@ export default class ServicesHero extends Component {
        <br></br>
        {/* <div> */}
       
-       <div className="arrow-container">
+       <div onClick={this.scrollDown} className="arrow-container">
        <p className="action-button">{this.props.button}</p>
-            <a onClick={this.scrollDown}><Image className="arrow-img center" src={arrow}></Image></a>
+            <a ><Image className="arrow-img center" src={arrow}></Image></a>
             </div>
        {/* </div> */}
          
@@ -95,9 +97,9 @@ export default class ServicesHero extends Component {
             
 
 
-        </Col>
+        </div>
         {/* <Col md={3}></Col> */}
-    </Row>
+    </div>
       )
   
     }

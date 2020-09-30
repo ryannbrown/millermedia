@@ -36,8 +36,8 @@ export default class HomeOfferings extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        width: `243px`,
-                        height: `243px`,
+                        // width: `243px`,
+                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`
@@ -54,8 +54,8 @@ export default class HomeOfferings extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        width: `243px`,
-                        height: `243px`,
+                        // width: `243px`,
+                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`
@@ -72,8 +72,8 @@ export default class HomeOfferings extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        width: `243px`,
-                        height: `243px`,
+                        // width: `243px`,
+                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`
@@ -90,8 +90,8 @@ export default class HomeOfferings extends Component {
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
                         // backgroundAttachment: `fixed`,
-                        width: `243px`,
-                        height: `243px`,
+                        // width: `243px`,
+                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
                         position: `relative`

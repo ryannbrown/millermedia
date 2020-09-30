@@ -29,7 +29,7 @@ export default class HomeAbout extends Component {
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             // backgroundAttachment: `fixed`,
-            height: `125%`,
+            height: `100%`,
             width: `25vh`,
             display: `flex`,
             alignItems: `center`,
@@ -37,13 +37,15 @@ export default class HomeAbout extends Component {
             //   cover no-repeat center center fixed`
         }}></Col>
          <Col xs={12} md={6} className="about-text">
-             
+         <div className="vertical-line"></div>
+         <div className="about-text-box">
              <h1>Working Together</h1>
              <p>At Miller Media Partners, your goals are our goals, and we reflect that in our flexible pricing options and unique strategies.</p>
              <p>Whether you're looking for full-service advertising or a standalone design package, we will work <i><strong>with</strong></i> you to achieve mutual success.</p>
              <p>So, what makes us different?</p>
              <p>It's simple - agencies think in 'win' scenarios. Partners think 'win-win'. And we're all about those 'win-wins'.</p>
              <Button className="about-lead-btn" variant="outline-dark">GIVE US A SHOUT</Button>
+             </div>
          </Col>
          <div className="vertical-line-about"></div>
      </Row>

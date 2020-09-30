@@ -4,11 +4,14 @@
         /* width:100%; */
         background-color:#eaeaea;
         height:170px;
+        justify-content: center;
+        align-items: center;
     }
 
     .greyfooter-content{
         /* width:100%; */
         margin:20px auto;
+        text-align:center;
     }
 
     .greyfooter > h1 {
@@ -30,6 +33,7 @@
 
     .darkfooter{
         background-color:rgb(63 63 63);
+        text-align: center;
     }
 
     hr {

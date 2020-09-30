@@ -24,6 +24,7 @@ export default class HomePackage extends Component {
 
             <Row className="package-block">
                 <Col xs={12} md={6} className="package-text">
+                <Image className="stamp-img-mobile" style={{display: 'none'}} src={mmp} width='150px'></Image>
 
                     <h1>The Whole Package</h1>
                     <p>Looking for a way to tackle Google Ads but not sure where to start?
@@ -31,9 +32,8 @@ export default class HomePackage extends Component {
                     <p>Want to spice up your business's branding a bit? Leave it to us!
 We love working with our partners to turn their branding dreams into reality.</p>
                     <p>Gung-ho for a little bit of everything? Awesome! We'll ensure your branding and message stay consistent from the moment pen touches paper to each time your ideal customer converts.</p>
-                    <Button className="about-lead-btn" variant="outline-dark">GIVE US A SHOUT</Button>
                 </Col>
-                <Col xs={12} md={6} style={{
+                <Col className="lemon-col" xs={12} md={6} style={{
                     backgroundImage: `url(${lemons})`,
                     // backgroundColor: `#333333f2`,
                     // opacity: `90%`,
@@ -49,7 +49,7 @@ We love working with our partners to turn their branding dreams into reality.</p
                     position: `relative`
                     //   cover no-repeat center center fixed`
                 }}><Image className="stamp-img" src={mmp} width='150px'></Image>
-                    <div className="lemon-btn">
+                    <div className="lemon-btn tc">
                         <p>Explore Our Services</p>
                         <a onClick={this.scrollDown}><Image className="lemon-arrow center" src={arrow}></Image></a>
                         </div>

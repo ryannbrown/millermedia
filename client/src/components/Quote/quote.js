@@ -17,8 +17,8 @@ export default class HomeQuote extends Component {
   
       return (
       
-      <div className="quote-block">
-            <div className="vertical-line"></div>
+      <div className="quote-block tc">
+            {/* <div className="vertical-line"></div> */}
           <h1 style={{fontSize:`1.5rem`}}>"{this.props.text}"</h1>
           <h2><i>{this.props.author}</i></h2>
       </div>
