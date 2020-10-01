@@ -15,6 +15,9 @@ import Navigation from "./components/Navigation/index"
 import Homepage from "./pages/Homepage/index"
 import About from "./pages/About/index"
 import Services from "./pages/Services/index"
+import Ppc from "./pages/Services/ppc/index"
+import Fullservicedesign from "./pages/Services/fullservicedesign/index"
+import Logodesignbranding from "./pages/Services/logodesignbranding/index"
 // import BlogPost from "./pages/BlogPost/index.js"
 // import Footer from "./components/Footer/index.js"
 // import Portfolio from "./components/Portfolio/index"
@@ -36,6 +39,9 @@ function App() {
          <Navigation/>
          <Router history = {history}>
            <Switch>
+             <Route path="/full-service-design" component={Fullservicedesign}/>
+             <Route path="/logo-design-branding" component={Logodesignbranding}/>
+             <Route path="/ppc" component={Ppc}/>
              <Route path="/services" component={Services}/>
              <Route path="/about" component={About}/>
              <Route path="/" component={Homepage}/>
