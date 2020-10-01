@@ -2,6 +2,11 @@
     text-align:center;
 }
 
+
+.bio-wrapper {
+    margin-top:50px;
+}
+
 .flex-wrapper {
     display:flex;
     flex-direction:row;

@@ -24,16 +24,31 @@ export default class Team extends Component {
     }
 
 
-    toggle(selection) {
+    toggle(selection, distance) {
         console.log(selection, " toggled")
         this.setState({
             isToggled: true,
             toggledSelection: selection
         })
+        var y = window.scrollY;
+        console.log(window.scrollY)
+       
+        // TO DO, add anchor tags to scroll down
+        if (this.state.isMobile) {
+            let newPosition = y + distance;
+            setTimeout(function() {window.scrollTo(0, newPosition);},500);
+        } else if (!this.state.isMobile) {
+            let newPosition = y + 500;
+            setTimeout(function() {window.scrollTo(0, newPosition);},500);
+        }
     }
 
     componentDidMount() {
-
+        if (window.innerWidth < 667) {
+            this.setState({
+              isMobile: true,
+            });
+          }
 
     }
 
@@ -116,7 +131,7 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
                 <p>Tap our faces to get to know us better</p>
 
                 <div className="image-wrapper">
-                    <div onClick={() => { this.toggle('alex') }} className="image-container" style={{
+                    <div onClick={() => { this.toggle('alex', 1000) }} className="image-container" style={{
                         backgroundImage: `url(${alex})`,
                         // backgroundColor: `#333333f2`,
                         // opacity: `90%`,
@@ -139,7 +154,7 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
                         </div>
 
                     </div>
-                    <div onClick={() => { this.toggle('abby') }} className="image-container" style={{
+                    <div onClick={() => { this.toggle('abby', 750) }} className="image-container" style={{
                         backgroundImage: `url(${abby})`,
                         // backgroundColor: `#333333f2`,
                         // opacity: `90%`,
@@ -163,7 +178,7 @@ I love licking faces, sitting on laps, hanging my head out the car window, and e
 
 
                     </div>
-                    <div onClick={() => { this.toggle('finn') }} className="image-container" style={{
+                    <div onClick={() => { this.toggle('finn', 500) }} className="image-container" style={{
                         backgroundImage: `url(${finn})`,
                         // backgroundColor: `#333333f2`,
                         // opacity: `90%`,
