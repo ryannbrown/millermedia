@@ -1,143 +1,197 @@
-
 .service-block {
-    display: flex;
-    width: 75%;
-    margin: 0px auto;
-    position:relative;
+  display: flex;
+  width: 75%;
+  margin: 0px auto;
+  position: relative;
 }
-.ppc-text{
-    width:75%;
-    text-align:center;
-    margin:0px auto;
+.ppc-text {
+  width: 50%;
+  text-align: center;
+  margin: 0px auto;
 }
 
-.ppc-text >h1 {
-    font-size:2.5rem;
+.margin-top {
+  margin-top: 100px !important;
+}
+
+.ppc-text > h1 {
+  /* font-size: 2.5rem; */
+  margin-bottom: 25px;
 }
 
 .service-block-logo {
-    transform:rotate(-35deg);
-    position:absolute;
-top:-20%;
+  transform: rotate(-35deg);
+  position: absolute;
+  top: -20%;
 }
 
-.grey-div{
-    position:absolute;
-    background-color:rgb(241, 242, 242);
-    height:400px;
-    width:150px;
-    right:-15%;
+.grey-div {
+  position: absolute;
+  background-color: rgb(241, 242, 242);
+  height: 400px;
+  width: 150px;
+  right: -15%;
 }
 .collage {
-    padding:25px;
-    text-align:left;
-    margin-top:-10%;
+  padding: 25px;
+  text-align: left;
+  margin-top: -10%;
+  position: relative;
 }
-
 
 .collage-1 {
-    z-index:400;
+  z-index: 400;
 }
 .collage-2 {
-    z-index:500;
-    margin-left:-5%;
-    margin-top:25%;
-    border: 10px solid white;
+  z-index: 500;
+  margin-left: -5%;
+  margin-top: 25%;
+  border: 10px solid white;
 }
 
 .vertical-line-service {
-    position: absolute;
-    border-left: 1px solid rgba(210, 158, 17, 1);
-    height: 400px;
-    left: 27%;
-    z-index: 600;
-    bottom: -100vh;
+  position: absolute;
+  border-left: 1px solid rgba(210, 158, 17, 1);
+  height: 400px;
+  z-index: 600;
+  bottom: -200px;
+  left: 50px;
 }
 
 .fb-text {
-    padding:50px;
-    width:75%;
-    margin:0px auto;
-    text-align:center;
+  padding: 50px;
+  width: 75%;
+  margin: 0px auto;
+  text-align: center;
 }
 
 .fb-text > h1 {
-    padding:25px;
+  padding: 25px;
 }
 
-.fb-text
-
-.logo-branding-block {
-    height:800px;
+.fb-text .logo-branding-block {
+  height: 800px;
 }
 
 .logo-branding-box {
-    position:relative;
-    background-color:rgb(241, 242, 242);
-    margin-top:-5% !important;
-    /* height:250px; */
-    width:50%;
-    margin:0px auto;
-    z-index:1000;
+  position: relative;
+  background-color: rgb(241, 242, 242);
+  margin-top: -150px !important;
+  /* height: 250px; */
+  width: 75%;
+  margin: 0px auto;
+  z-index: 1000;
+  text-align: center;
 }
 
 .logo-branding-text {
-    padding:25px;
-    margin:15px;
+  padding: 25px;
+  margin: 15px;
 }
 
 .logo-branding-text > * {
-    margin:10px;
+  margin: 10px;
 }
 
-
 .collage-two {
-    padding:25px;
-    text-align:right;
-    margin-top:-15%;
-    height:800px;
-
+  padding: 25px;
+  text-align: right;
+  margin-top: -15%;
+  height: 800px;
+  position: relative;
 }
 
 .collage-3 {
-    position:relative;
-    z-index:400;
-   
-    
+  position: relative;
+  z-index: 400;
 }
 .collage-4 {
-    position:relative;
-    z-index:600 !important;
-    border: 10px solid white;
-    margin-right:-5%;
-    margin-top:25%;
+  position: relative;
+  z-index: 600 !important;
+  border: 10px solid white;
+  margin-right: -5%;
+  margin-top: 25%;
 }
 
 .vertical-line-service-1 {
-    position: absolute;
-    border-left: 1px solid rgba(210, 158, 17, 1);
-    height: 400px;
-    width:20px;
-    right: -15%;
-    z-index: 600;
-    top:-200px;
+  position: absolute;
+  border-left: 1px solid rgba(210, 158, 17, 1);
+  height: 400px;
+  width: 20px;
+  right: -15%;
+  z-index: 600;
+  top: -200px;
 }
 
 .vertical-line-service-2 {
-    position: relative;
+    position: absolute;
     border-left: 1px solid rgba(210, 158, 17, 1);
     height: 800px;
-    width:20px;
-    left: 15%;
+    width: 20px;
+    left: 5%;
     z-index: 600;
-    bottom: 75vh;
+    bottom: 150px;
 }
 
-
 .service-block-logo-2 {
-    transform:rotate(35deg);
-    position:absolute;
-    margin-left:-22.5%;
-    margin-top:14%; 
-    z-index:1000;
+  transform: rotate(35deg);
+  position: absolute;
+  right: 225px;
+  top: 175px;
+  z-index: 1000;
+}
+
+@media (max-width: 776px) {
+  .btn {
+    text-align: center !important;
+  }
+  .service-block-logo {
+    top: -20%;
+    left: -5%;
+  }
+  .grey-div {
+    width: 75px;
+  }
+  .ppc-text {
+    width: 75%;
+    text-align: left;
+  }
+
+  .collage-1 {
+    width: 50% !important;
+  }
+  .collage-2 {
+    z-index: 500;
+    margin-left: -5%;
+    margin-top: 50%;
+    border: 10px solid white;
+    width: 50% !important;
+  }
+
+  .fb-text {
+    width: 100% !important;
+  }
+
+  .logo-branding-box {
+    width: 90%;
+  }
+
+  .logo-branding-text {
+    padding: 10px;
+    margin: 15px;
+  }
+  .collage-two {
+    margin-top: 0%;
+  }
+  .collage-3 {
+    width: 50% !important;
+  }
+  .collage-4 {
+    width: 50% !important;
+    margin-top: 50%;
+  }
+
+  .service-block-logo-2 {
+    display: none;
+  }
 }

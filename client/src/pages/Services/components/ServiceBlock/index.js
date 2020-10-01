@@ -45,7 +45,7 @@ export default class ServiceBlock extends Component {
                     <a href="/contact"><Button className="about-lead-btn" variant="outline-dark">FIND OUT MORE</Button></a>
                 </div>
                 <div className="logo-branding-block">
-                    <Image className="" width='75%' height="400px" src={desk}></Image>
+                    <Image className="" width='100%' height="400px" src={desk}></Image>
                     <div className="logo-branding-box">
                         <div className="logo-branding-text">
                             <h1>Logo Design + Branding</h1>
@@ -54,7 +54,7 @@ export default class ServiceBlock extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="service-block">
+                <div className="service-block margin-top">
                     <div className="ppc-text">
                         <h1>Full-Service Design</h1>
                         <p>Got a design need? No problem! We offer a wide range of design services that provide you with whatever you need. From hourly design work to design retainer packages, we're there when you need us, for whatever you need us for.</p>
