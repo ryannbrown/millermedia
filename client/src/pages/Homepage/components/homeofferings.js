@@ -43,7 +43,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`
                         //   cover no-repeat center center fixed`
                     }}>
-                        <Button variant="dark" className="offering-btn">PPC ADVERTISING</Button>
+                        <a href="/ppc"><Button variant="dark" className="offering-btn">PPC ADVERTISING</Button></a>
                     </div>
                     <div className="offering" style={{
                         backgroundImage: `url(${fbads})`,
@@ -61,7 +61,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`
                         //   cover no-repeat center center fixed`
                     }}>
-                        <Button variant="dark" className="offering-btn">FACEBOOK ADS</Button>
+                        <a href="/services"><Button variant="dark" className="offering-btn">FACEBOOK ADS</Button></a>
                     </div>
                     <div className="offering" style={{
                         backgroundImage: `url(${logobranding})`,
@@ -79,7 +79,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`
                         //   cover no-repeat center center fixed`
                     }}>
-                        <Button variant="dark" className="offering-btn">LOGO + BRANDING</Button>
+                        <a href="/logo-design-branding"><Button variant="dark" className="offering-btn">LOGO + BRANDING</Button></a>
                     </div>
                     <div className="offering" style={{
                         backgroundImage: `url(${fullservice})`,
@@ -97,7 +97,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`
                         //   cover no-repeat center center fixed`
                     }}>
-                        <Button variant="dark" className="offering-btn">FULL-SERVICE DESIGN</Button>
+                        <a href="full-service-design"><Button variant="dark" className="offering-btn">FULL-SERVICE DESIGN</Button></a>
                     </div>
                 </div>
             </div>

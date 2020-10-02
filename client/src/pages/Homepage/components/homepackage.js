@@ -49,10 +49,12 @@ We love working with our partners to turn their branding dreams into reality.</p
                     position: `relative`
                     //   cover no-repeat center center fixed`
                 }}><Image className="stamp-img" src={mmp} width='150px'></Image>
-                    <div className="lemon-btn tc">
+                    <a href="/services">
+                        <div className="lemon-btn tc">
                         <p>Explore Our Services</p>
                         <a onClick={this.scrollDown}><Image className="lemon-arrow center" src={arrow}></Image></a>
                         </div>
+                        </a>
                        
                     {/* <Image className="stamp-img" src={mmp} width='25px'></Image> */}
                 </Col>
