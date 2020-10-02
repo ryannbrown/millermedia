@@ -1,0 +1,79 @@
+.connect-form {
+    text-align:center !important;
+    color:rgba(210, 158, 17, 1);
+}
+
+
+/* .connect-page {
+    height:75vh;
+    background-image: linear-gradient(to right top, #ccebfd, #d3ecfd, #daeefc, #e0effc, #e6f1fb);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.connect-page{
+    text-align:center;
+}
+
+.connect-page .home-wrapper > p {
+    padding:50px;
+}
+
+.form-container {
+    border-right:1px solid rgba(210, 158, 17, 1) !important;
+    padding: 75px;
+    width: 50%;
+}
+
+@media (max-width:667px) {
+    .form-container {
+        padding: 0px;
+        width: 75%;
+        margin: 0px auto;
+    }
+}
+
+
+.connect-page .form-control {
+background-color:transparent;
+border: 1px solid rgba(210, 158, 17, 1) ;
+color:black;
+border-radius:0px;
+}
+
+.connect-page .form-control::placeholder {
+    color: black;
+    opacity:.5;
+    }
+
+
+    .fade.toast.show {
+        width: 100% !important;
+        margin: 5px auto;
+    }
+
+    .contact-boxes {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+        overflow:hidden;
+    }
+
+    .info-hours {
+        padding:75px;
+    }
+
+    .info-hours h1 {
+        margin:15px;
+    }
+
+    .info-hours div {
+        margin:50px;
+    }
+
+    textarea.form-control {
+        min-height:50px;
+        max-height:250px;
+    }

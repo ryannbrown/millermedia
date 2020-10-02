@@ -11,7 +11,7 @@ import {
 } from "react-router-dom";
 import Navigation from "./components/Navigation/index"
 // import Homepage from "./pages/Homepage/index"
-
+import Contact from "./pages/Contact/index"
 import Homepage from "./pages/Homepage/index"
 import About from "./pages/About/index"
 import Services from "./pages/Services/index"
@@ -40,6 +40,7 @@ function App() {
          <Navigation/>
          <Router history = {history}>
            <Switch>
+             <Route path="/contact" component={Contact}/>
              <Route path="/faq" component={Faq}/>
              <Route path="/full-service-design" component={Fullservice}/>
              <Route path="/logo-design-branding" component={Logodesignbranding}/>
