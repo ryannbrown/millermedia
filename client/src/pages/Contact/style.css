@@ -59,6 +59,7 @@ border-radius:0px;
         align-items: center;
         height: 50vh;
         overflow:hidden;
+        margin-bottom: 10vh;
     }
 
     .info-hours {

@@ -42,7 +42,7 @@ export default class Navigation extends Component {
     return (
  
       <div>
-     <Navbar bg="light" expand="lg">
+     <Navbar fixed="top" bg="light" expand="lg">
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Brand href="#home">
     <Image src={logo} width="300px"></Image>
