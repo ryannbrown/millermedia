@@ -152,16 +152,21 @@ border:none;
     transform: rotate(35deg);
     position:absolute;
     top:-75px;
-    right:-50px;
+    right:0px;
     z-index:-100;
 }
 
 
 .package-block {
-        height: 50vh;
-        width: 75%;
-        margin: 0vh auto;
-        margin-top:15vh;
+    height: 50vh;
+    width: 100%;
+    margin-top: 15vh;
+    padding: 75px;
+}
+
+    .package-text{
+        /* margin-left:25%; */
+        text-align:center;
     }
 
     
@@ -172,17 +177,17 @@ border:none;
     }
     .package-text > p {
         margin:25px 0px;
-        width:75%;
+        width:100%;
         /* padding:50px;  */
         /* font-size:4rem; */
     }
     
     .lemon-btn {
         position:absolute;
-        top:75%;
-        right:-25%;
+        top: 75%;
+        right: 75px;
         padding: 10px 40px;
-        height: 150px;
+        width: 200px;
         background-color:rgba(210, 158, 17, 1);
         color:white;
         border:none;

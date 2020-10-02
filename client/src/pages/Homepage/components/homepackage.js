@@ -42,7 +42,7 @@ We love working with our partners to turn their branding dreams into reality.</p
                     backgroundSize: `contain`,
                     backgroundRepeat: `no-repeat`,
                     // backgroundAttachment: `fixed`,
-                    height: `65%`,
+                    height: `275px`,
                     width: `25vh`,
                     display: `flex`,
                     alignItems: `center`,
