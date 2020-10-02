@@ -76,6 +76,10 @@
         transform: rotate(-35deg);
 }
 
+.service-branding-box h1 {
+    margin-top:25px;
+}
+
 .service-branding-wrapper {
 display:flex;
 padding: 0px 25px;
