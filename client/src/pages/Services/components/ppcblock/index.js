@@ -18,7 +18,7 @@ export default class Ppcblock extends Component {
             <div className="ppc-grey"></div>
             <div className="ppc-vertical-line-1"></div>
             <Image className="grey-stamp" src={logo}></Image>
-            <img src={desk} className="ppc-grey-img"></img>
+            <div style={{backgroundImage:`url(${desk})`}} className="ppc-grey-img"></div>
             </div>
           <div className="ppc-text-1">
             <h1>Why us?</h1>

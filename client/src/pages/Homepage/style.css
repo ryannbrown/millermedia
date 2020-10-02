@@ -289,4 +289,26 @@ border:none;
     .offerings-block {
         margin-top:100vh;
     }
+
+
+    .grey-container {
+        height: 800px !important;
+        width: 100px !important;
+        float: left;
+        z-index: -100;
+        position: relative;
+        margin-right: 25px;
+    }
+    .ppc-grey {
+        height: 800px !important;
+        width: 100px !important;
+    }
+    .ppc-text-1 {
+        width: 90% !important;
+        margin: 0px auto;
+        margin-left:0px !important;
+    }
+    .branding-img {
+        margin-top:50vh !important;
+    }
 }
