@@ -61,7 +61,7 @@ flex-direction:column;
     left: 5%;
     z-index: 500;
 }
-@media (max-width:767px) {
+@media (max-width:768px) {
     .hero-header {
         font-size:2rem;
     }
@@ -115,7 +115,7 @@ flex-direction:column;
     margin: 25px 0px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .about-text-box{
     text-align:center;
     }
@@ -236,7 +236,7 @@ border:1px solid transparent;
             flex-wrap:wrap;
         }
     }
-    @media (max-width:767px) {
+    @media (max-width:768px) {
         .package-text > p {
             padding:10px;
         }

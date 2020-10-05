@@ -163,7 +163,7 @@ flex: 0 0 21%;
     color: rgba(210, 158, 17, 1);
 }
 
-@media (max-width:776px) {
+@media (max-width:768px) {
 
     .image-container {
         margin-top:75px;

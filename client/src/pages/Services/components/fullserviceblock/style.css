@@ -126,7 +126,7 @@ padding: 0px 25px;
     text-align: center;
 }
 
-@media(max-width:767px){
+@media(max-width:768px){
     .ppc-vertical-line-1 {
         left: 200%;
         top: 75px;

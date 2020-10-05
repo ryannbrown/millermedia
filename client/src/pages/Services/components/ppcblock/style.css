@@ -78,7 +78,7 @@
 }
 
 
-@media(max-width:767px) {
+@media(max-width:768px) {
   .ppc-grey-img {
     top:95%;
     min-width:250px !important;

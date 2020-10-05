@@ -142,7 +142,7 @@
   z-index: 1000;
 }
 
-@media (max-width: 776px) {
+@media (max-width: 768px) {
   .btn {
     text-align: center !important;
   }
