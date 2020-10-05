@@ -115,17 +115,33 @@ a.nav-link {
         height:75px;
     }
 } */
-.dropdown:hover .dropdown-menu {
+@media(max-width:992px) {
+.collapse .show, form.form-inline {
+    text-align:center;
+}
+
+a#basic-nav-dropdown {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+    .nav-link {
+       margin:0px 0px !important;
+    }
+}
+
+
+/* .dropdown:hover .dropdown-menu {
     display: block !important;
     transition:.6s;
 
-}
+} */
 
-.dropdown-menu {
+/* .dropdown-menu {
     margin-top: 0px;
     text-align:center;
 }
 
 .dropdown {
     margin:0px auto;
-}
+} */
