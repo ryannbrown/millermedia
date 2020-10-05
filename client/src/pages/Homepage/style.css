@@ -67,6 +67,9 @@ flex-direction:column;
     z-index: 500;
 }
 @media (max-width:767px) {
+    .hero-header {
+        font-size:2rem;
+    }
     .vertical-line{
         height: 400px;
         right: 5%;
