@@ -19,6 +19,10 @@ import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
 
 export default class HomeOfferings extends Component {
 
+    navTo = (page) => {
+        window.location = page
+    }
+
 
     render() {
 
@@ -27,75 +31,51 @@ export default class HomeOfferings extends Component {
             <div className="offerings-block">
                 <h1>Here's some of what we offer.</h1>
                 <div className="wrapper">
-                    <div className="offering" style={{
+                    <div className="offering" onClick={() => {this.navTo('/ppc')}} style={{
                         backgroundImage: `url(${ppc})`,
-                        // backgroundColor: `#333333f2`,
-                        // opacity: `90%`,
-                        // backgroundBlendMode: `multiply`,
                         backgroundPosition: `center`,
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
-                        // backgroundAttachment: `fixed`,
-                        // width: `243px`,
-                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
-                        position: `relative`
-                        //   cover no-repeat center center fixed`
+                        position: `relative`,
+                        cursor:'pointer'
                     }}>
                         <a href="/ppc"><Button variant="dark" className="offering-btn">PPC ADVERTISING</Button></a>
                     </div>
-                    <div className="offering" style={{
+                    <div className="offering" onClick={() => {this.navTo('/services')}} style={{
                         backgroundImage: `url(${fbads})`,
-                        // backgroundColor: `#333333f2`,
-                        // opacity: `90%`,
-                        // backgroundBlendMode: `multiply`,
                         backgroundPosition: `center`,
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
-                        // backgroundAttachment: `fixed`,
-                        // width: `243px`,
-                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
-                        position: `relative`
-                        //   cover no-repeat center center fixed`
+                        position: `relative`,
+                        cursor:'pointer'
                     }}>
                         <a href="/services"><Button variant="dark" className="offering-btn">FACEBOOK ADS</Button></a>
                     </div>
-                    <div className="offering" style={{
+                    <div className="offering" onClick={() => {this.navTo('/logo-design-branding')}} style={{
                         backgroundImage: `url(${logobranding})`,
-                        // backgroundColor: `#333333f2`,
-                        // opacity: `90%`,
-                        // backgroundBlendMode: `multiply`,
                         backgroundPosition: `center`,
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
-                        // backgroundAttachment: `fixed`,
-                        // width: `243px`,
-                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
-                        position: `relative`
-                        //   cover no-repeat center center fixed`
+                        position: `relative`,
+                        cursor:'pointer'
                     }}>
                         <a href="/logo-design-branding"><Button variant="dark" className="offering-btn">LOGO + BRANDING</Button></a>
                     </div>
-                    <div className="offering" style={{
+                    <div className="offering" onClick={() => {this.navTo('full-service-design')}} style={{
                         backgroundImage: `url(${fullservice})`,
-                        // backgroundColor: `#333333f2`,
-                        // opacity: `90%`,
-                        // backgroundBlendMode: `multiply`,
                         backgroundPosition: `center`,
                         backgroundSize: `cover`,
                         backgroundRepeat: `no-repeat`,
-                        // backgroundAttachment: `fixed`,
-                        // width: `243px`,
-                        // height: `243px`,
                         display: `flex`,
                         alignItems: `center`,
-                        position: `relative`
-                        //   cover no-repeat center center fixed`
+                        position: `relative`,
+                        cursor:'pointer'
                     }}>
                         <a href="full-service-design"><Button variant="dark" className="offering-btn">FULL-SERVICE DESIGN</Button></a>
                     </div>

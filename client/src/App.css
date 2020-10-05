@@ -26,33 +26,6 @@ font-style: normal;
   overflow-x: hidden;
 }
 
-h1, h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight:300;
-  /* font-size:2.5rem; */
-}
-
-h1 {
-  margin:0;
-}
-
-p, li, h3, h4, h5, a, button {
-  font-family: 'Questrial', sans-serif;
-  /* font-family: adelle, serif; */
-  letter-spacing:.1rem
-}
-
-p {
-  font-size:.8rem;
-}
-
-.libre {
-  font-family: 'Libre Baskerville', serif;
-}
-
-.rob {
-  font-family: 'Roboto', sans-serif;
-}
 
 
 /* .App {
@@ -159,4 +132,50 @@ p {
   padding-right: 0 !important;
   margin-left:0 !important;
   margin-right:0 !important;
+}
+
+
+
+h1, h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight:300;
+  /* font-size:2.5rem; */
+}
+
+h1 {
+  margin:0;
+  font-size:2.5rem;
+}
+
+h2 {
+  font-size:1.75rem;
+}
+
+p {
+  font-size:.75rem;
+}
+
+p, li, h3, h4, h5, a, button {
+  font-family: 'Questrial', sans-serif;
+  /* font-family: adelle, serif; */
+  letter-spacing:.1rem
+}
+
+p {
+  font-size:.8rem;
+}
+
+.libre {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.rob {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@media(max-width:667px) {
+  h1 {
+    font-size:2rem;
+  }
 }
