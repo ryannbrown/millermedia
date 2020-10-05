@@ -67,7 +67,7 @@ export default class ServicesHero extends Component {
             backgroundSize: `cover`,
             backgroundRepeat: `no-repeat`,
             backgroundAttachment: `fixed`,
-            height: `85vh`,
+            height: `100vh`,
             display: `flex`,
             justifyContent:'center',
             alignItems: `center`,

@@ -25,11 +25,20 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
 }
 */
 
-
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,.5);
+    border-color: rgba(0,0,0,.1);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
 
 
 .navbar-brand {
-   /* padding-left: 3rem; */
+    display: inline-block;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
 } 
 
 .navbar-nav {
@@ -37,6 +46,7 @@ span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypograph
     width: 100%;
     justify-content: flex-end;
     margin-right:10%;
+    text-align:center;
 }
 
 a.nav-link {
@@ -105,12 +115,17 @@ a.nav-link {
         height:75px;
     }
 } */
-
-
 .dropdown:hover .dropdown-menu {
     display: block !important;
+    transition:.6s;
+
 }
 
 .dropdown-menu {
     margin-top: 0px;
+    text-align:center;
+}
+
+.dropdown {
+    margin:0px auto;
 }
