@@ -58,7 +58,7 @@ border-radius:0px;
         display: flex;
         align-items: center;
         height: 50vh;
-        overflow:hidden;
+        /* overflow:hidden; */
         margin-bottom: 10vh;
     }
 
@@ -77,4 +77,33 @@ border-radius:0px;
     textarea.form-control {
         min-height:50px;
         max-height:250px;
+    }
+
+    @media (max-width:776px) {
+        .contact-boxes{
+            flex-direction:column;
+        }
+        .form-container {
+            border-right:none !important;
+        }
+        .hours {
+            border-top:1px solid rgba(210, 158, 17, 1) 
+        }
+        .info-hours div {
+            margin-bottom:0px !important;
+            margin:0px !important;
+            position:relative
+        }
+
+        iframe.map-frame {
+            margin-top: 50px;
+        }
+    }
+
+
+
+    .info-hours div {
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
     }

@@ -1,29 +1,4 @@
-/* a.tagline.navbar-brand {
-    display: inherit;
-    font-size:.75em;
-}
 
-.menu-icon {
-    position:fixed;
-    z-index:550;
-}
-
-.nav-brand a {
-    text-align:center;
-}
-
-.title{
-    position:fixed;
-    margin:0px auto;
-    width:100%;
-    z-index:500;
-}
-
-
-span.MuiTypography-root.MuiListItemText-primary.MuiTypography-body1.MuiTypography-displayBlock  {
-    color:black;
-}
-*/
 
 .navbar-light .navbar-toggler {
     color: rgba(0,0,0,.5);
@@ -137,18 +112,6 @@ a#basic-nav-dropdown {
     }
 }
 
-
-/* .dropdown:hover .dropdown-menu {
-    display: block !important;
-    transition:.6s;
-
-} */
-
-/* .dropdown-menu {
-    margin-top: 0px;
-    text-align:center;
+.dropdown-item.active, .dropdown-item:active {
+    background-color:rgba(210, 158, 17, 1) !important;
 }
-
-.dropdown {
-    margin:0px auto;
-} */

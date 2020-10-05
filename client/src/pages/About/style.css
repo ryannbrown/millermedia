@@ -81,7 +81,6 @@
  .about-action-text > p {
      margin: 25px auto;
      width: 50%;
-     font-size:.85rem;
  }
 
  .about-action-text > p:nth-child(3) {
@@ -160,8 +159,7 @@ flex: 0 0 21%;
     width:50%;
     margin:0px auto;
 }
-.toggled-faq > h1 {
-    font-size:1.5rem;
+.toggled-faq > h2 {
     color: rgba(210, 158, 17, 1);
 }
 

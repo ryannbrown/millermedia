@@ -70,11 +70,8 @@ export default class Contact extends Component {
       <div className="connect-page">
         <Hero
           image={heroImg}
-          title="Pay-Per-Click Advertising"
-          paragraph1="If you're not on Google and Bing, you're missing out on leads.
-If a company were only to run one type of advertising, we would insist it be PPC. Pay-per-click advertising is extremely effective at capturing people looking for your product, whether your budget is $100,000 or $100."
-          paragraph2="PPC is largely based on keyword targeting, and setting up a few keywords for your brand or core product lines is relatively simple. However, there are a lot of nuances to the platforms and strategy behind PPC, so if you want some help managing your ads or even just a free consultation to help you set up your account, don't hesitate to give us a call!"
-          button="SCROLL FOR MORE"
+          title="Contact Us"
+          button="GET IN TOUCH"
         />
         <div className="home-wrapper">
           <p>
@@ -85,12 +82,12 @@ If a company were only to run one type of advertising, we would insist it be PPC
           <div className="contact-boxes">
             <ContactForms></ContactForms>
             <div className="info-hours">
-              <div>
+              <div className="info">
                 <h1>Contact Info</h1>
                 <p>info@millermediapartners.com </p>
                 <p>919.229.9095</p>
               </div>
-              <div>
+              <div className="hours">
                 <h1>Hours of Operation</h1>
                 <p>Monday - Friday</p>
                 <p>8am-4pm</p>
@@ -100,6 +97,7 @@ If a company were only to run one type of advertising, we would insist it be PPC
         </div>
         {this.state.renderMap && (
           <iframe
+          className="map-frame"
             width="100%"
             height="350"
             frameborder="0"
@@ -108,9 +106,9 @@ If a company were only to run one type of advertising, we would insist it be PPC
             allowfullscreen
           ></iframe>
         )}
-        <div className="map-div">
+        {/* <div className="map-div">
           <div id="map"></div>
-        </div>
+        </div> */}
         <Footer
           text="Looking for more info?"
           button="CHECK OUT OUR SERVICES"
