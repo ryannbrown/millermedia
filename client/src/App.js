@@ -19,6 +19,8 @@ import Ppc from "./pages/Services/ppc/index"
 import Fullservice from "./pages/Services/fullservicedesign/index"
 import Logodesignbranding from "./pages/Services/logodesignbranding/index"
 import Faq from "./pages/Faq/index.js"
+import Blog from "./pages/Blog/index.js"
+import BlogPost from "./pages/BlogPost/index.js"
 // import BlogPost from "./pages/BlogPost/index.js"
 // import Footer from "./components/Footer/index.js"
 // import Portfolio from "./components/Portfolio/index"
@@ -42,6 +44,8 @@ function App() {
            <Switch>
              <Route path="/contact" component={Contact}/>
              <Route path="/faq" component={Faq}/>
+             <Route path="/blog/:post" component={BlogPost}/>
+             <Route path="/blog" component={Blog}/>
              <Route path="/full-service-design" component={Fullservice}/>
              <Route path="/logo-design-branding" component={Logodesignbranding}/>
              <Route path="/ppc" component={Ppc}/>
