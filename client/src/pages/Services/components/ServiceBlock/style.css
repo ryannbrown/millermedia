@@ -5,17 +5,18 @@
   position: relative;
 }
 .ppc-text {
-  width: 75%;
-  text-align: center;
-  margin: 0px auto;
+  width: 50%;
+  /* text-align: center; */
+  margin: 25px auto;
 }
 
 .margin-top {
   margin-top: 100px !important;
 }
 
-.ppc-text > h1 {
+.ppc-text > h2 {
   margin-bottom: 25px;
+  font-size:35px !important;
 }
 
 .service-block-logo {
@@ -27,8 +28,9 @@
 .grey-div {
   position: absolute;
   background-color: rgb(241, 242, 242);
-  height: 400px;
+  height: 550px;
   width: 150px;
+  top:-50px;
   right: -15%;
 }
 .collage {
@@ -90,16 +92,18 @@
 }
 
 .logo-branding-text > * {
-  margin: 10px;
+  margin: 25px;
 }
 
 .collage-two {
   padding: 25px;
   text-align: right;
   margin-top: -15%;
-  height: 800px;
+  /* height: 800px; */
+  height:100%;
   position: relative;
   z-index:-50;
+  margin-bottom:5vh;
 }
 
 .collage-3 {

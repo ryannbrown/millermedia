@@ -128,8 +128,8 @@ padding: 0px 25px;
 
 @media(max-width:768px){
     .ppc-vertical-line-1 {
-        left: 200%;
-        top: 75px;
+        top: -50px;
+        left: 35px;
     }
     .service-text-1 {
         width: 75%;

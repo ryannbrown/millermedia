@@ -17,8 +17,8 @@ export default class AboutAction extends Component {
   
       return (
           
-          <Row className="about-action-block">
-         <Col className="about-action-text">
+          <div className="about-action-block">
+         <div className="about-action-text">
           <Image className="about-stamp-img" src={mmp} width='150px'></Image>
              
              <p>Because we've worked in small businesses and we own one of our own, we get it - scaling can be difficult and learning all the nuances of marketing and design is tedious.</p>
@@ -26,9 +26,9 @@ export default class AboutAction extends Component {
 </p>
              <p>At Miller Media Partners, we leverage our combined experiences in advertising and design and work with you to reach your goals. Trust and transparency are the foundation of all of our services, interactions, and partnerships. You heard it right - we cut out all the canned responses of a typical agency and give it to you straight.</p>
              <Button className="about-lead-btn" variant="outline-dark">SEE IF WE'RE A GOOD MATCH</Button>
-         </Col>
+         </div>
          {/* <div className="vertical-line-about"></div> */}
-     </Row>
+     </div>
       )
   
     }

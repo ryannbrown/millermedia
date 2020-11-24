@@ -22,18 +22,19 @@ export default class HomePackage extends Component {
 
         return (
 
-            <Row className="package-block">
-                <Col xs={12} md={6} className="package-text">
+            <div className="package-block">
+                <div className="package-text">
                 <Image className="stamp-img-mobile" style={{display: 'none'}} src={mmp} width='150px'></Image>
 
-                    <h1>The Whole Package</h1>
+                    <h2>The Whole Package</h2>
                     <p>Looking for a way to tackle Google Ads but not sure where to start?
                     No problem! We've spent years fine-tuning our strategy and creating campaigns that are sure to get you noticed.</p>
                     <p>Want to spice up your business's branding a bit? Leave it to us!
 We love working with our partners to turn their branding dreams into reality.</p>
                     <p>Gung-ho for a little bit of everything? Awesome! We'll ensure your branding and message stay consistent from the moment pen touches paper to each time your ideal customer converts.</p>
-                </Col>
-                <Col className="lemon-col" xs={12} md={6} style={{
+                </div>
+                <div className="lemon-div">
+                <div className="lemon-col"style={{
                     backgroundImage: `url(${lemons})`,
                     // backgroundColor: `#333333f2`,
                     // opacity: `90%`,
@@ -57,9 +58,11 @@ We love working with our partners to turn their branding dreams into reality.</p
                         </a>
                        
                     {/* <Image className="stamp-img" src={mmp} width='25px'></Image> */}
-                </Col>
                 {/* <div className="vertical-line-about"></div> */}
-            </Row>
+                </div>
+
+                </div>
+            </div>
         )
 
     }

@@ -19,8 +19,8 @@ export default class HomeQuote extends Component {
       
       <div className="quote-block tc">
             {/* <div className="vertical-line"></div> */}
-          <h1>"{this.props.text}"</h1>
-          <h2><i>{this.props.author}</i></h2>
+          <h3>"{this.props.text}"</h3>
+          <p><i>{this.props.author}</i></p>
       </div>
       )
   

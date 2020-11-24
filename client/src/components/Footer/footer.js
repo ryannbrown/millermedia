@@ -41,7 +41,7 @@ export default class Footer extends Component {
             <div>
                 <div className="greyfooter">
                     <div className="greyfooter-content">
-                        <h1 className="item">{this.props.text}</h1>
+                        <h3 className="item">{this.props.text}</h3>
                         <a href={this.props.link}><button className="item" className="connect-btn">{this.props.button}</button></a>
                     </div>
                 </div>
