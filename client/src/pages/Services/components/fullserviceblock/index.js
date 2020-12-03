@@ -68,15 +68,16 @@ export default class Fullserviceblock extends Component {
           </div>
         </div>
         <div className="service-branding-block">
+        <Image className="grey-stamp-mobile" src={logo}></Image>
           <div
             style={{ backgroundImage: `url(${branding}` }}
             className="service-img"
           ></div>
           <div className="branding-box-parent">
-          <Image className="grey-stamp" src={logo}></Image>
+         
          
           <div className="service-branding-box">
-         
+          <Image className="grey-stamp" src={logo}></Image>
             <div className="service-line"></div>
             <h1>Design Retainer Packages</h1>
             <div className="service-branding-wrapper">

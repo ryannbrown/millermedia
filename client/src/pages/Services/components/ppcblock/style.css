@@ -89,6 +89,10 @@
   border: 10px solid white;
 }
 
+.grey-stamp-mobile {
+  display:none;
+}
+
 
 .grey-stamp {
   position:absolute;
@@ -102,6 +106,17 @@
 
 
 @media(max-width:768px) {
+
+  .grey-stamp-mobile {
+    display: block;
+    position:absolute;
+    width:90px;
+    height:auto;
+    z-index:200;
+    top: -75px;
+    left: 50px;
+    transform: rotate(-25deg);
+  }
 
 
   .ppc-right {

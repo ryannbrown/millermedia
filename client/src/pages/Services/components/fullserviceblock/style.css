@@ -4,9 +4,9 @@
     border-left: 1px solid rgba(210, 158, 17, 1);
     height: 400px;
     width: 20px;
-    right: 25%;
+    right: 0%;
     z-index: 600;
-    top: 50px;
+    top: 100px;
   }
 
   .service-block-1 {
@@ -66,7 +66,7 @@
   }
 
 .service-branding-block{
-    /* margin:5vh 0vh; */
+    position:relative;
 }
 
   .service-branding-box {
@@ -132,7 +132,8 @@ padding: 0px 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin:15vh 0vh;
+    margin: 15vh auto;
+    width: 60%;
 }
 
 .hourly-work h2 {
@@ -155,7 +156,7 @@ padding: 0px 25px;
 
     .service-line{
         top: unset;
-        bottom:-100px;
+        bottom:-200px;
     }
 
 
