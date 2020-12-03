@@ -49,17 +49,17 @@ export default class About extends Component {
               
                     <div className="bio-wrapper flex-wrapper">
                         <div className="flex-item">
-                            <h1 className="flex-above">HOME BASE</h1>
+                            <h3 className="flex-above">HOME BASE</h3>
                             <p className="flex-below">Sarasota, FL</p>
                         </div>
                         <hr></hr>
                         <div className="flex-item">
-                            <h1 className="flex-above">MARRIED</h1>
+                            <h3 className="flex-above">MARRIED</h3>
                             <p className="flex-below">March 2018</p>
                         </div>
                         <hr></hr>
                         <div className="flex-item">
-                            <h1 className="flex-above">MILLER HOUNDS</h1>
+                            <h3 className="flex-above">MILLER HOUNDS</h3>
                             <p className="flex-below">Finnegan</p>
                         </div>
                     </div>

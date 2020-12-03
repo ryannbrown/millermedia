@@ -7,10 +7,10 @@ import '../style.css';
 // import profPic from "../../media/5.PNG"
 import mugs from "../../../media/2mugss.jpg"
 import mmp from "../../../media/mmp.png"
-import ppc from "../../../media/ppc.jpg"
-import logobranding from "../../../media/logobranding.jpg"
-import fullservice from "../../../media/fullservice.jpg"
-import fbads from "../../../media/fbads.jpg"
+import ppc from "../../../media/ppc-min.jpg"
+import logobranding from "../../../media/logobranding-min.jpg"
+import fullservice from "../../../media/fullservice-min.jpg"
+import fbads from "../../../media/fbads-min.jpg"
 import arrow from "../../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'

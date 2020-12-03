@@ -13,23 +13,19 @@ export default class Brandingblock extends Component {
   render() {
     return (
       <section>
-        <div className="ppc-block margin-top">
+        <div className="branding-block margin-top">
         
-          <div className="ppc-text">
-            <h1>How It Works</h1>
+          <div className="branding-text">
+            <h2>How It Works</h2>
             <p>
-              How It Works The most popular platforms for PPC are Google Ads and
-              Microsoft (Bing) Ads. We can get you set up quickly on both
-              platforms with goals set up in Google Analytics. We at Miller
-              Media Partners believe it's important to align our compensation
-              with your goals, and our flexible pricing models reflect that.
+            Our graphic design services extend beyond the day-to-day. We work with businesses like yours to bring your ideas for your brand to life. Whether you're partnering with us on a new logo design or a total rebranding, we always start with a little warmup questionnaire that can help you visualize just what you're looking for in your logo or brand.
             </p>
             <p>
-            For more details on pay-per-click advertising, please contact us to set up a free consultation so we can answer any questions you may have and figure out if we're a good fit for each other. Even if you just want some help setting up your account, we're just a phone call away.
+            From there, we gather all the intel we need to start conceptualizing some ideas, building different logos for you to choose from and, if needed, a full branding guide with guidelines that you can follow to ensure your business's collateral, signage, etc. is consistent.
             </p>
             <a href="/ppc">
               <Button className="about-lead-btn" variant="outline-dark">
-                GET YOUR FREE CONSULTATION
+                GET STARTED
               </Button>
             </a>
           </div>
@@ -41,17 +37,17 @@ export default class Brandingblock extends Component {
              </div>
              <div className="branding-wrapper">
                  <div className="branding-package">
-                    <h1>Logo Design Package</h1>
+                    <h3>Logo Design Package</h3>
                     <p>Looking to take the first step toward a brand that drops jaws? This package is the perfect place to start!</p>
                     <p>Please keep in mind that it can take several weeks to complete a logo from the initial design concepts to the final product.</p>
-                    <p>$390</p>
+                    <p><i>$390</i></p>
                     <Button className="about-lead-btn" variant="outline-dark">INQUIRE</Button>
                  </div>
                  <div className="branding-package">
-                    <h1>Branding Package</h1>
+                    <h3>Branding Package</h3>
                     <p>If you're looking to invest in making your brand a show-stopping, customer converting machine, this package has it all.</p>
                     <p>Including full logo design services in addition to brand guidelines and branding strategy, we work with you to bring it all together.</p>
-                    <p>$1,690</p>
+                    <p><i>$1,690</i></p>
                     <Button className="about-lead-btn" variant="outline-dark">INQUIRE</Button>
                  </div>
              </div>

@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import './style.css';
 import logo from '../../../../media/mmp.png';
 import desk from '../../../../media/desk.jpg';
+import wood from '../../../../media/wood1.jpg';
 import lights from '../../../../media/lights.jpg';
 // import arrow from "../../../media/white-arrow.png"
 // import profPic from "../../media/5.PNG"
@@ -56,20 +57,35 @@ export default class ServiceBlock extends Component {
                     </div>
                 </div>
                 <div className="service-block margin-top">
-                    <div className="ppc-text">
+                    <div className="ppc-text-2">
                         <h2>Full-Service Design</h2>
                         <p>Got a design need? No problem! We offer a wide range of design services that provide you with whatever you need. From hourly design work to design retainer packages, we're there when you need us, for whatever you need us for.</p>
                         <a href="/full-service-design"><Button className="about-lead-btn" variant="outline-dark">GET STARTED</Button></a>
                     </div>
 
                     {/* <div className="vertical-line-about"></div> */}
+                    <div className="collage-home" >
+                    <div className="collage-3"
+                 style={{
+                        backgroundImage: `url(${wood})`,
+                        backgroundPosition: `center`,
+                        backgroundSize: `cover`,
+                        backgroundRepeat: `no-repeat`,
+                    //   width:'200px'
+                        //   cover no-repeat center center fixed`
+                    }}>
+                   </div>
+                    </div>
+
+                   
+                   
                 </div>
-                    <div className="collage-two">
+                <div className="collage-two">
                     <img className="collage-4" width='25%' src={desk}></img>
-                    <img className="collage-3" width='25%' src={lights}></img>
+               
                     <Image className="service-block-logo-2" width='100px' src={logo}></Image>
                     <div className="vertical-line-service-2"></div>
-                </div>
+                    </div>
             </section>
         )
 

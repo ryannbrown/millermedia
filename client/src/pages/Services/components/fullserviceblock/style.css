@@ -1,5 +1,19 @@
 
+.fullservice-vertical-line-1 {
+    position: absolute;
+    border-left: 1px solid rgba(210, 158, 17, 1);
+    height: 400px;
+    width: 20px;
+    right: 25%;
+    z-index: 600;
+    top: 50px;
+  }
 
+  .service-block-1 {
+    margin:100px;
+    display:flex;
+    flex-direction:row-reverse;
+  }
 
 .service-grey-container {
     height:400px;
@@ -7,7 +21,8 @@
     float:right;
     z-index:-100;
     position:relative;
-    margin-left: 175px;
+    margin-left: 100px;
+    /* margin:0px auto; */
 }
 
 .service-grey {
@@ -19,6 +34,11 @@
   position:absolute;
   z-index:200;
 
+}
+
+.service-right{
+    display:flex;
+    justify-content: center;
 }
 
 .service-grey-img {
@@ -33,12 +53,12 @@
     border: 10px solid white;
   }
 
-.service-text-1 {
+/* .service-text-1 {
     width: 50%;
     margin:50px;
-}
+} */
 
-.service-text-1 h1 {
+.service-text-1 h2 {
     margin-bottom:25px;
   }
   .service-text-1 button {
@@ -73,7 +93,7 @@
         z-index:200;
         left:-2%;
         top:90%;
-        transform: rotate(-35deg);
+        transform: rotate(-25deg);
 }
 
 .service-branding-box h1 {
@@ -115,8 +135,12 @@ padding: 0px 25px;
     margin:15vh 0vh;
 }
 
-.hourly-work h1 {
+.hourly-work h2 {
     padding:25px;
+}
+
+.hourly-work p {
+    margin:0px;
 }
 
 .hourly-work .btn {
@@ -124,9 +148,41 @@ padding: 0px 25px;
     padding: .375rem .75rem;
     margin:0px auto;
     text-align: center;
+    margin-top:25px;
 }
 
 @media(max-width:768px){
+
+    .service-line{
+        top: unset;
+        bottom:-100px;
+    }
+
+
+    .branding-box-parent{
+        position:relative;
+    }
+
+    .service-branding-box > .grey-stamp {
+        width:65px;
+    }
+    
+.fullservice-vertical-line-1 {
+    right: 0%;
+
+  }
+
+
+    .service-block-1 {
+        margin:100px;
+        display:flex;
+        flex-direction:column-reverse;
+      }
+
+    .service-block-1 {
+        margin:0px;
+    }
+
     .ppc-vertical-line-1 {
         top: -50px;
         left: 35px;
@@ -136,29 +192,22 @@ padding: 0px 25px;
         margin: 0px auto;
         text-align: center;
     }
-    .service-block-1 {
+    /* .service-block-1 {
         margin-bottom:100vh;
         position:relative;
-    }
+    } */
+
     .service-grey-container {
-        height: 1000px;
-        width: 83px;
-        float: right;
-        z-index: -100;
-        position: absolute;
-        top: 100%;
-        right: 150px;
+        /* margin:0px auto; */
+
     }
+
     .service-branding-box {
         padding-top:25px;
+        width:90%;
     }
     .service-branding-wrapper {
         flex-wrap:wrap;
         padding:25px 25px;
-        }
-
-        .grey-stamp{
-            top: -35% !important;
-    left: 20px !important;
         }
 }

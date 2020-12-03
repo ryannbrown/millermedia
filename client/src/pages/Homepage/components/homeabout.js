@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 // import HomeHero from "../../components/HomeHero/index"
 import '../style.css';
 // import profPic from "../../media/5.PNG"
-import mugs from "../../../media/2mugss.jpg"
+import mugs from "../../../media/2mugss-min.jpg"
 import arrow from "../../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'

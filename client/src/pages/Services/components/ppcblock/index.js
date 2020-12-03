@@ -15,15 +15,19 @@ export default class Ppcblock extends Component {
       <section>
         <div className="home-wrapper">
           <div className="ppc-block-1 margin-top">
+            <div className="ppc-left">
             <div className="grey-container">
+            <div
+                style={{ backgroundImage: `url(${desk})` }}
+                className="ppc-grey-img-left"
+              ></div>
               <div className="ppc-grey"></div>
               <div className="ppc-vertical-line-1"></div>
               <Image className="grey-stamp" src={logo}></Image>
-              <div
-                style={{ backgroundImage: `url(${desk})` }}
-                className="ppc-grey-img"
-              ></div>
+            
             </div>
+            </div>
+            <div className="ppc-right">
             <div className="ppc-text-1">
               <h1>Why us?</h1>
               <p>
@@ -53,6 +57,13 @@ export default class Ppcblock extends Component {
                   TAKE THE FIRST STEP
                 </Button>
               </a>
+            </div>
+            <div className="ppc-grey-img-container">
+            <div
+                style={{ backgroundImage: `url(${desk})` }}
+                className="ppc-grey-img"
+              ></div>
+            </div>
             </div>
           </div>
           </div>

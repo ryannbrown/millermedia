@@ -18,47 +18,52 @@ export default class Fullserviceblock extends Component {
       <section>
         <div className="home-wrapper">
           <div className="service-block-1 margin-top">
-            <div className="service-grey-container">
-              <div
-                className="service-grey"
-                style={{ backgroundImage: `url(${office})` }}
-              ></div>
-              <div className="ppc-vertical-line-1"></div>
+            <div className="service-right">
+              <div className="service-grey-container">
+                <div
+                  className="service-grey"
+                  style={{ backgroundImage: `url(${office})` }}
+                >
+                  <div className="fullservice-vertical-line-1"></div>
+                </div>
 
-              <div
-                style={{ backgroundImage: `url(${notebook})` }}
-                className="service-grey-img"
-              ></div>
+                <div
+                  style={{ backgroundImage: `url(${notebook})` }}
+                  className="service-grey-img"
+                ></div>
+              </div>
             </div>
-            <div className="service-text-1">
-              <h1>How It Works</h1>
-              <p>
-                At Miller Media Partners, we offer a variety of graphic design
-                services in order to provide you and your business with exactly
-                what you need.
-              </p>
-              <p>
-                Our design retainer packages cover businesses of all sizes so
-                that you can keep us on tap for whenever you may need us. With
-                these packages, we're 100% at your service.
-              </p>
-              <p>
-                If you're looking for graphic design service on a
-                project-to-project basis - no biggie! We also offer hourly
-                design work that allows you to partner with us on an as-needed
-                basis.
-              </p>
-              <p>
-                Our process for projects is simple and easy, using our design
-                request forms to submit information pertaining to whatever task
-                you need tackling. Just fill out the form and we'll take care of
-                the rest!
-              </p>
-              <a href="/ppc">
-                <Button className="about-lead-btn" variant="outline-dark">
-                  CHECK OUT OUR PRICING
-                </Button>
-              </a>
+            <div className="service-left">
+              <div className="service-text-1">
+                <h2>How It Works</h2>
+                <p>
+                  At Miller Media Partners, we offer a variety of graphic design
+                  services in order to provide you and your business with
+                  exactly what you need.
+                </p>
+                <p>
+                  Our design retainer packages cover businesses of all sizes so
+                  that you can keep us on tap for whenever you may need us. With
+                  these packages, we're 100% at your service.
+                </p>
+                <p>
+                  If you're looking for graphic design service on a
+                  project-to-project basis - no biggie! We also offer hourly
+                  design work that allows you to partner with us on an as-needed
+                  basis.
+                </p>
+                <p>
+                  Our process for projects is simple and easy, using our design
+                  request forms to submit information pertaining to whatever
+                  task you need tackling. Just fill out the form and we'll take
+                  care of the rest!
+                </p>
+                <a href="/ppc">
+                  <Button className="about-lead-btn" variant="outline-dark">
+                    CHECK OUT OUR PRICING
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -67,13 +72,16 @@ export default class Fullserviceblock extends Component {
             style={{ backgroundImage: `url(${branding}` }}
             className="service-img"
           ></div>
+          <div className="branding-box-parent">
+          <Image className="grey-stamp" src={logo}></Image>
+         
           <div className="service-branding-box">
-            <Image className="grey-stamp" src={logo}></Image>
+         
             <div className="service-line"></div>
             <h1>Design Retainer Packages</h1>
             <div className="service-branding-wrapper">
               <div className="logo-branding-text">
-                <h1>Copper</h1>
+                <h3>Copper</h3>
                 <p>
                   10 hours of design work per month​ Price reflects an 8%
                   discount 3-month initial commitment
@@ -86,7 +94,7 @@ export default class Fullserviceblock extends Component {
                 </a>
               </div>
               <div className="logo-branding-text">
-                <h1>Gold</h1>
+                <h3>Gold</h3>
                 <p>
                   20 hours of design work per month Price reflects a 15%
                   discount 3-month initial commitment
@@ -99,7 +107,7 @@ export default class Fullserviceblock extends Component {
                 </a>
               </div>
               <div className="logo-branding-text">
-                <h1>Platinum</h1>
+                <h3>Platinum</h3>
                 <p>
                   40 hours of design work per month Price reflects a 25%
                   discount 3-month initial commitment
@@ -112,19 +120,19 @@ export default class Fullserviceblock extends Component {
                 </a>
               </div>
             </div>
+            </div>
           </div>
         </div>
         <div className="home-wrapper">
-    
-            <div className="hourly-work">
-              <h1>Hourly Design Work</h1>
-              <p>$70/hour</p>
-              <p>No initial commitment</p>
-              <p>$150 design work deposit (applied to final cost)</p>
-              <Button className="about-lead-btn" variant="outline-dark">
-                    INQUIRE
-                  </Button>
-            </div>
+          <div className="hourly-work">
+            <h2>Hourly Design Work</h2>
+            <p>$70/hour</p>
+            <p>No initial commitment</p>
+            <p>$150 design work deposit (applied to final cost)</p>
+            <Button className="about-lead-btn" variant="outline-dark">
+              INQUIRE
+            </Button>
+          </div>
         </div>
       </section>
     );

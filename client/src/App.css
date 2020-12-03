@@ -1,7 +1,6 @@
 
 html {
   scroll-behavior:smooth;
-  margin-right:-5px;
   overflow-x:hidden;
 }
 
@@ -90,7 +89,7 @@ p, li, a, button {
 
 p {
   /* font-size:.8rem; */
-  font-size:16px;
+  font-size:14px;
 }
 
 .libre {
@@ -119,6 +118,6 @@ h3 {
     font-size:27px;
   }
   h3 {
-    font-size:17px;
+    font-size:20px;
   }
 }

@@ -157,7 +157,7 @@
 }
 
 .stamp-img {
-  transform: rotate(35deg);
+  transform: rotate(25deg);
   position: absolute;
   top: -75px;
   right: -100px;
@@ -301,7 +301,7 @@
     top: -85px; /*half of size of img*/
     left: 75%;
     width: 25%;
-    transform: rotate(35deg);
+    transform: rotate(25deg);
   }
   .package-text > h1 {
     text-align: center;
@@ -331,9 +331,9 @@
   }
 
 
-  .branding-img {
+  /* .branding-img {
     margin-top: 50vh !important;
-  }
+  } */
 }
 
 @media (max-width: 499px) {

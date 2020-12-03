@@ -58,7 +58,7 @@ export default class ServicesHero extends Component {
       <div>
         {/* <Col md={3}></Col> */}
 
-        <div sm={12} md={12} className="home-img tc" style={{
+        <div className="home-img tc" style={{
             backgroundImage: `url(${this.props.image})`,
             backgroundColor: `#333333f2`,
             opacity: `90%`,
