@@ -20,6 +20,10 @@
     flex-direction: column;
     text-align: center;
   }
+
+  .greyfooter-content > * {
+    margin:-5px;
+  }
 }
 
 .greyfooter-content > h3 {

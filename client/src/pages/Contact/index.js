@@ -83,12 +83,12 @@ export default class Contact extends Component {
             <ContactForms></ContactForms>
             <div className="info-hours">
               <div className="info">
-                <h1>Contact Info</h1>
+                <h3>Contact Info</h3>
                 <p>info@millermediapartners.com </p>
                 <p>919.229.9095</p>
               </div>
               <div className="hours">
-                <h1>Hours of Operation</h1>
+                <h3>Hours of Operation</h3>
                 <p>Monday - Friday</p>
                 <p>8am-4pm</p>
               </div>
@@ -96,6 +96,8 @@ export default class Contact extends Component {
           </div>
         </div>
         {this.state.renderMap && (
+          <div className="map-div">
+
           <iframe
           className="map-frame"
             width="100%"
@@ -105,6 +107,7 @@ export default class Contact extends Component {
             src={`https://www.google.com/maps/embed/v1/place?key=${mapKey}&q=Sarasota,Fl&zoom=15`}
             allowfullscreen
           ></iframe>
+          </div>
         )}
         {/* <div className="map-div">
           <div id="map"></div>

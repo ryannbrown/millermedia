@@ -87,7 +87,7 @@ export default class Fullserviceblock extends Component {
                   10 hours of design work per month​ Price reflects an 8%
                   discount 3-month initial commitment
                 </p>
-                <p>$650/mo</p>
+                <p><i>$650/mo</i></p>
                 <a href="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
@@ -100,7 +100,7 @@ export default class Fullserviceblock extends Component {
                   20 hours of design work per month Price reflects a 15%
                   discount 3-month initial commitment
                 </p>
-                <p>$1,200/mo</p>
+                <p><i>$1,200/mo</i></p>
                 <a href="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
@@ -113,7 +113,7 @@ export default class Fullserviceblock extends Component {
                   40 hours of design work per month Price reflects a 25%
                   discount 3-month initial commitment
                 </p>
-                <p>$2,200/mo</p>
+                <p><i>$2,200/mo</i></p>
                 <a href="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
