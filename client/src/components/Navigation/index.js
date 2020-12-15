@@ -53,7 +53,7 @@ export default class Navigation extends Component {
       <Nav.Link href="/about">About</Nav.Link>
       {/* <Nav.Link href="/services">Services</Nav.Link> */}
       <NavDropdown title="Services" id="basic-nav-dropdown">
-        <NavDropdown.Item href="/services">Services</NavDropdown.Item>
+        <NavDropdown.Item href="/services">Overview</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item href="/ppc">Pay-Per-Click Advertising</NavDropdown.Item>
         <NavDropdown.Item href="logo-design-branding">Logo Design + Branding</NavDropdown.Item>

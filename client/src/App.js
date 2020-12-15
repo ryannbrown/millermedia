@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
+// import { Container, Nav, Button, Col, Row, Card } from 'react-bootstrap'
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +10,7 @@ import {
   useParams
 } from "react-router-dom";
 import Navigation from "./components/Navigation/index"
+import Nav from "./components/Nav/index"
 // import Homepage from "./pages/Homepage/index"
 import Contact from "./pages/Contact/index"
 import Homepage from "./pages/Homepage/index"
@@ -39,7 +40,8 @@ function App() {
 
   return (
     <div className="App">
-         <Navigation/>
+         {/* <Navigation/> */}
+         <Nav/>
          <Router history = {history}>
            <Switch>
              <Route path="/contact" component={Contact}/>

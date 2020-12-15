@@ -1,3 +1,14 @@
-/* .home-img {
-    text-align:center;
-} */
+ 
+ @media (max-width:768px) {
+    .home-img {
+        height:100vh !important;
+    }
+    .home-img > * {
+        margin: 25px;
+    }
+ }
+ @media (max-width:600px) {
+    .home-img {
+        margin-top:150px;
+    }
+ }

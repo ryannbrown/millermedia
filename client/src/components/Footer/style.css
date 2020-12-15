@@ -28,6 +28,7 @@
 
 .greyfooter-content > h3 {
   /* position:absolute; */
+  font-size:1.5rem;
   font-weight:bold;
 }
 
@@ -37,6 +38,10 @@
   background-color: rgba(210, 158, 17, 1);
   color: white;
   border: none;
+}
+
+.connect-btn:hover {
+  opacity:.75;
 }
 
 .item {
@@ -50,7 +55,7 @@
 
 hr {
   width: 15%;
-  border-top: 1px solid rgba(210, 158, 17, 1);
+  border-top: 2px solid rgb(210, 158, 17, 0.55);;
 }
 
 .stamplogo {

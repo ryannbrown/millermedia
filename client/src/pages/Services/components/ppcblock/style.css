@@ -21,7 +21,7 @@
 
 .ppc-vertical-line {
   position: absolute;
-  border-left: 1px solid rgba(210, 158, 17, 1);
+  border-left: 2px solid rgb(210, 158, 17, 0.55);;
   height: 400px;
   width: 20px;
   right: 0%;
@@ -30,7 +30,7 @@
 }
 .ppc-vertical-line-1 {
   position: absolute;
-  border-left: 1px solid rgba(210, 158, 17, 1);
+  border-left: 2px solid rgb(210, 158, 17, 0.55);;
   height: 400px;
   width: 20px;
   left: 25%;
@@ -98,7 +98,7 @@
   position:absolute;
   width:100px;
   height:auto;
-  z-index:200;
+  z-index:900;
   top: 67%;
   left: 100%;
   transform: rotate(-25deg);
@@ -161,7 +161,7 @@
   position: absolute;
   width: 100px;
   height: auto;
-  z-index: 300;
+  z-index: 900;
   top: 99% !important;
   left: 191% !important;
   transform: rotate(-25deg);

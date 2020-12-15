@@ -22,7 +22,7 @@
 }
 
 .form-container {
-    border-right:1px solid rgba(210, 158, 17, 1) !important;
+    border-right:2px solid rgb(210, 158, 17, 0.55) !important;
     padding: 75px;
     min-width: 50%;
 }
@@ -44,7 +44,7 @@
 
 .connect-page .form-control {
 background-color:transparent;
-/* border: 1px solid rgba(210, 158, 17, 1) ; */
+/* border: 2px solid rgb(210, 158, 17, 0.55); ; */
 border:none;
 color:black;
 border-radius:0px;
@@ -102,7 +102,7 @@ border-radius:0px;
             border-right:none !important;
         }
         .hours {
-            border-top:1px solid rgba(210, 158, 17, 1) 
+            border-top:2px solid rgb(210, 158, 17, 0.55); 
         }
         .info-hours div {
             margin-bottom:0px !important;
