@@ -51,13 +51,55 @@
 .darkfooter {
   background-color: rgb(63 63 63);
   text-align: center;
+  min-height:431px;
+  height:100%;
 }
 
-hr {
+.darkfooter hr {
   width: 15%;
-  border-top: 2px solid rgb(210, 158, 17, 0.55);;
+  border-top: 2px solid rgb(210, 158, 17, 0.55);
+  padding-bottom:15px;
+}
+
+.darkfooter p {
+  color:white;
+}
+
+.footer-wrapper{
+  display:flex;
+  max-width:980px;
+margin:0px auto;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.footer-wrapper div {
+  margin:10px;
 }
 
 .stamplogo {
   margin-top: 25px;
 }
+
+.footer-wrapper a:hover {
+text-decoration: none;
+}
+
+.footer-wrapper p{
+margin-bottom:0;
+text-align:left;
+}
+
+.footer-wrapper button {
+  padding: 7.5px 30px;
+  background-color:transparent;
+  color:white;
+  /* border:none; */
+  font-size:.85rem;
+  border: 1px solid white;
+  transition:.6s;
+}
+.footer-wrapper button:hover {
+  background-color: rgb(210, 158, 17);
+}
+
