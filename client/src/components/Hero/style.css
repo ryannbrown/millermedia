@@ -7,3 +7,8 @@
         margin: 5px;
     }
  }
+ @media (max-width:500px) {
+    .home-img {
+        margin-top:125px;
+    }
+ }
