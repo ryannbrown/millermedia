@@ -23,7 +23,7 @@
   cursor: pointer;
   color: white;
   position: absolute;
-  bottom: 1.5rem;
+  bottom: .5rem;
   display: flex;
   flex-direction: column;
 }
