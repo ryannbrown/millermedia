@@ -4,6 +4,7 @@ import "./style.css";
 import logo from '../../media/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+var _ = require("lodash");
 
 export default class Nav extends Component {
   constructor(props) {
@@ -12,23 +13,49 @@ export default class Nav extends Component {
     this.listener = null;
     this.state = {
       status: "top",
-      navToggle: false
+      mobileNavToggle: false
     };
   }
 
   toggleNav = () => {
-   
+   if (this.state.mobileNavToggle) {
+     this.setState({
+         mobileNavToggle: false
+     })
+   } else if (!this.state.mobileNavToggle) {
     this.setState({
-        navToggle: !this.state.navToggle
-    })
+      mobileNavToggle: true
+  })
+   }
   }
 
   componentDidMount() {}
 
+  componentDidUpdate() {
+    window.addEventListener(
+      "resize",
+      _.debounce(() => {
+        if (window.innerWidth > 1150) {
+          this.setState({
+            mobileNavToggle: false,
+          });
+          document.getElementById("navvy-bar").className = "header";
+          document.getElementById("menu-toggle").checked = false
+        } 
+        else if (window.innerWidth < 1150) {
+          if (this.state.mobileNavToggle) {
+            document.getElementById("menu-toggle").checked = true;
+          }
+        }
+          
+      }, 400)
+    );
+  }
+
   render() {
     return (
       <div className="nav-section">
-        <header class={this.state.navToggle ? 'mobile-header' : 'header'}>
+        <header id="navvy-bar" class={this.state.mobileNavToggle ? 'mobile-header' : 'header'}>
           <nav>
             <div className="nav-brand"> <img className="nav-logo" src={logo} width="300px"></img></div>
             <ul>
