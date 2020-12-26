@@ -14,7 +14,7 @@ import fbads from "../../../media/fbads-min.jpg"
 import arrow from "../../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from "react-router-dom"
 
 
 export default class HomeOfferings extends Component {
@@ -41,7 +41,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`,
                         cursor:'pointer'
                     }}>
-                        <a href="/ppc"><Button variant="dark" className="offering-btn">PPC ADVERTISING</Button></a>
+                        <Link to="/ppc"><Button variant="dark" className="offering-btn">PPC ADVERTISING</Button></Link>
                     </div>
                     <div className="offering" onClick={() => {this.navTo('/services')}} style={{
                         backgroundImage: `url(${fbads})`,
@@ -53,7 +53,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`,
                         cursor:'pointer'
                     }}>
-                        <a href="/services"><Button variant="dark" className="offering-btn">FACEBOOK ADS</Button></a>
+                        <Link to="/services"><Button variant="dark" className="offering-btn">FACEBOOK ADS</Button></Link>
                     </div>
                     <div className="offering" onClick={() => {this.navTo('/logo-design-branding')}} style={{
                         backgroundImage: `url(${logobranding})`,
@@ -65,7 +65,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`,
                         cursor:'pointer'
                     }}>
-                        <a href="/logo-design-branding"><Button variant="dark" className="offering-btn">LOGO + BRANDING</Button></a>
+                        <Link to="/logo-design-branding"><Button variant="dark" className="offering-btn">LOGO + BRANDING</Button></Link>
                     </div>
                     <div className="offering" onClick={() => {this.navTo('full-service-design')}} style={{
                         backgroundImage: `url(${fullservice})`,
@@ -77,7 +77,7 @@ export default class HomeOfferings extends Component {
                         position: `relative`,
                         cursor:'pointer'
                     }}>
-                        <a href="full-service-design"><Button variant="dark" className="offering-btn">FULL-SERVICE DESIGN</Button></a>
+                        <Link to="full-service-design"><Button variant="dark" className="offering-btn">FULL-SERVICE DESIGN</Button></Link>
                     </div>
                 </div>
             </div>

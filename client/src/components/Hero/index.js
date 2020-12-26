@@ -9,7 +9,7 @@ import './style.css';
 import arrow from "../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
-
+import {Link} from "react-router-dom"
 
 
 export default class ServicesHero extends Component {
@@ -87,7 +87,7 @@ export default class ServicesHero extends Component {
       
        <div onClick={this.scrollDown} className="arrow-container">
        <p className="action-button">{this.props.button}</p>
-            <a ><Image className="arrow-img center" src={arrow}></Image></a>
+            <Link ><Image className="arrow-img center" src={arrow}></Image></Link>
             </div>
        {/* </div> */}
          

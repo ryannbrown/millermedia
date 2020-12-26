@@ -1,6 +1,7 @@
 import { Container, Nav, Button, Image, Row, Col } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import React, { Component } from "react";
+import {Link} from "react-router-dom"
 // import logo from './logo.svg';
 // import HomeHero from "../../components/HomeHero/index"
 import "./style.css";
@@ -52,11 +53,11 @@ export default class Ppcblock extends Component {
                 collaborative partnership with all of our clients regardless of
                 their budget.
               </p>
-              <a href="/ppc">
+              <Link to="/ppc">
                 <Button className="about-lead-btn" variant="outline-dark">
                   TAKE THE FIRST STEP
                 </Button>
-              </a>
+              </Link>
             </div>
             <div className="ppc-grey-img-container">
             <div
@@ -90,11 +91,11 @@ export default class Ppcblock extends Component {
                 if you just want some help setting up your account, we're just a
                 phone call away.
               </p>
-              <a href="/ppc">
+              <Link to="/ppc">
                 <Button className="about-lead-btn" variant="outline-dark">
                   GET YOUR FREE CONSULTATION
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -141,7 +141,7 @@ const children = [];
                 <div>
                     <p className="text-center">Item has been posted!</p>
                     {/* <Panel itemPosted="true"></Panel> */}
-                    {/* <a href="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></a> */}
+                    {/* <Link to="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></Link> */}
                 </div>
             )
         }

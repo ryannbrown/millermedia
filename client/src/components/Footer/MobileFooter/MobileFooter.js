@@ -2,6 +2,7 @@ import { Container, Nav, Button, Image, Col, Row } from "react-bootstrap";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component } from "react";
 // import logo from "../../media/stamplogo.png";
+import { Link } from "react-router-dom"
 import "./style.css";
 
 export default class MobileFooter extends Component {
@@ -29,11 +30,11 @@ export default class MobileFooter extends Component {
         <div className="greyfooter">
           <div className="greyfooter-content">
             <h3 className="item">{this.props.text}</h3>
-            <a href={this.props.link}>
+            <Link to={this.props.link}>
               <button className="item" className="connect-btn">
                 {this.props.button}
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="darkfooter">
@@ -63,30 +64,30 @@ export default class MobileFooter extends Component {
             <div>
               <p>NAVIGATE</p>
               <br></br>
-              <a href="/">
+              <Link to="/">
                 <p>Home</p>
-              </a>
-              <a href="/about">
+              </Link>
+              <Link to="/about">
                 <p>About</p>
-              </a>
-              <a href="/Services">
+              </Link>
+              <Link to="/Services">
                 <p>Services</p>
-              </a>
-              <a href="/ppc">
+              </Link>
+              <Link to="/ppc">
                 <p>PPC Advertising</p>
-              </a>
-              <a href="/logo-design-branding">
+              </Link>
+              <Link to="/logo-design-branding">
                 <p>Logo + Branding</p>
-              </a>
-              <a href="/full-service-design">
+              </Link>
+              <Link to="/full-service-design">
                 <p>Full-Service Design</p>
-              </a>
-              <a href="/faq">
+              </Link>
+              <Link to="/faq">
                 <p>FAQs</p>
-              </a>
-              <a href="/contact">
+              </Link>
+              <Link to="/contact">
                 <p>Contact</p>
-              </a>
+              </Link>
             </div>
 
             <div>
@@ -106,11 +107,11 @@ export default class MobileFooter extends Component {
             <br></br>
             <br></br>
           </div>
-        <a
+        <Link
           
           target="_blank"
-          href="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3"
-        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | Privacy Policy</p></a>
+          to="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3"
+        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | Privacy Policy</p></Link>
         </div>
       
       </div>

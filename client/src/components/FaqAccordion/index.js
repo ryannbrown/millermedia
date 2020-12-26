@@ -3,6 +3,7 @@ import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import {Link} from 'react-router-dom'
 import "./style.css";
 
 export default class FaqAccordion extends Component {
@@ -109,7 +110,7 @@ export default class FaqAccordion extends Component {
 
                 </p>
                 <p>
-                As far as design services go, we do offer three separate retainer packages so that you can request projects on-demand throughout the month. Our 'Single Scoop' package offers 10 hours of design work each month, our 'Double Scoop' offers 20 hours of design work each month, and our 'Triple Scoop' offers 40 hours of design work each month. It's really just a matter of what your business needs in the way of design. Our design retainers don't include logo or branding design, but we do offer those services separately as well as hourly design work for one-off projects. Here's a closer look at <a className="faq-link" href="pdflink">our retainer design services.</a>
+                As far as design services go, we do offer three separate retainer packages so that you can request projects on-demand throughout the month. Our 'Single Scoop' package offers 10 hours of design work each month, our 'Double Scoop' offers 20 hours of design work each month, and our 'Triple Scoop' offers 40 hours of design work each month. It's really just a matter of what your business needs in the way of design. Our design retainers don't include logo or branding design, but we do offer those services separately as well as hourly design work for one-off projects. Here's a closer look at <Link to="pdfLink" className="faq-link">our retainer design services.</Link>
                 </p>
                 <p>
                 If you'd like more information on our retainer services, contact us and we'll fill you in!
@@ -131,7 +132,7 @@ export default class FaqAccordion extends Component {
                 We want to be upfront with you, so we'll give it to you straight. Hourly design work does require a $150 deposit before work can begin. But don't worry! This deposit is applied to your final cost and, if you don't require enough work to cover the deposit, the difference will be refunded to you. Want more information on our different services? Here you go!
                 </p>
                 <p>
-                If you'd like more information on pricing for our design services, <a>contact us</a> and we'll give you the scoop!
+                If you'd like more information on pricing for our design services, <Link to="/contact">contact us</Link> and we'll give you the scoop!
                 </p>
               </Card.Body>
             </Accordion.Collapse>

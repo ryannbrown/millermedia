@@ -6,6 +6,7 @@ import React, { Component } from "react";
 import "./style.css";
 // import brandingImg from "../../../../media/branding.jpg"
 import branding from "../../../../media/branding.jpg"
+import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faGlassMartini } from "@fortawesome/free-solid-svg-icons";
 
@@ -23,11 +24,11 @@ export default class Brandingblock extends Component {
             <p>
             From there, we gather all the intel we need to start conceptualizing some ideas, building different logos for you to choose from and, if needed, a full branding guide with guidelines that you can follow to ensure your business's collateral, signage, etc. is consistent.
             </p>
-            <a href="/ppc">
+            <Link to="/ppc">
               <Button className="about-lead-btn" variant="outline-dark">
                 GET STARTED
               </Button>
-            </a>
+            </Link>
           </div>
          <div className="branding-packages">
       

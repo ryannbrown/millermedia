@@ -41,8 +41,8 @@ function App() {
   return (
     <div className="App">
          {/* <Navigation/> */}
-         <Nav/>
          <Router history = {history}>
+         <Nav/>
            <Switch>
              <Route path="/contact" component={Contact}/>
              <Route path="/faq" component={Faq}/>

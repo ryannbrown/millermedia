@@ -11,6 +11,7 @@ import Quote from '../../components/Quote/quote.js'
 import ServiceBlock from '../Services/components/ServiceBlock'
 // import arrow from "../../../media/white-arrow.png"
 import Footer from '../../components/Footer/footer'
+import {Link} from "react-router-dom"
 
 // import logo from '../../media/logo.png'
 

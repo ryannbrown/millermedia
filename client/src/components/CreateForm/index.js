@@ -97,7 +97,7 @@ class CreateForm extends Component {
                     <p className="text-center">Form has been added!</p>
                     <CreateFormInputs></CreateFormInputs>
                     {/* <Panel itemPosted="true"></Panel> */}
-                    {/* <a href="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></a> */}
+                    {/* <Link to="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></Link> */}
                 </div>
             )
         }

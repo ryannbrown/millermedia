@@ -12,6 +12,7 @@ import lemons from "../../../media/lemons.jpg"
 // import arrow from "../../../media/white-arrow.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuoteLeft, faGlassMartini } from '@fortawesome/free-solid-svg-icons'
+import {Link} from "react-router-dom"
 
 
 
@@ -50,12 +51,12 @@ We love working with our partners to turn their branding dreams into reality.</p
                     position: `relative`
                     //   cover no-repeat center center fixed`
                 }}><Image className="stamp-img" src={mmp} width='150px'></Image>
-                    <a href="/services">
+                    <Link to="/services">
                         <div className="lemon-btn tc">
                         <p>Explore Our Services</p>
-                        <a onClick={this.scrollDown}><Image className="lemon-arrow center" src={arrow}></Image></a>
+                        <Link onClick={this.scrollDown}><Image className="lemon-arrow center" src={arrow}></Image></Link>
                         </div>
-                        </a>
+                        </Link>
                        
                     {/* <Image className="stamp-img" src={mmp} width='25px'></Image> */}
                 {/* <div className="vertical-line-about"></div> */}

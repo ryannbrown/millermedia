@@ -4,6 +4,7 @@ import "./style.css";
 import logo from '../../media/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 var _ = require("lodash");
 
 export default class Nav extends Component {
@@ -60,40 +61,40 @@ export default class Nav extends Component {
             <div className="nav-brand"> <img className="nav-logo" src={logo} width="300px"></img></div>
             <ul>
               <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/About">About</a>
+                <Link to="/About">About</Link>
               </li>
               <li className="service-trigger">
               <input type="checkbox" class="nav-down-toggle" id="nav-toggle"></input>
               <FontAwesomeIcon className="nav-down" icon={faChevronDown}/>
-                <a href="/Services">Services</a>
+                <Link to="/Services">Services</Link>
                 <div className="nav-services">
                   <div className="nav-service-arrow">
               
                 
                   </div>
               <li>
-                <a href="/ppc">Pay-Per-Click Advertising</a>
+                <Link to="/ppc">Pay-Per-Click Advertising</Link>
               </li>
               <li>
-                <a href="/logo-design-branding">Logo Design + Branding</a>
+                <Link to="/logo-design-branding">Logo Design + Branding</Link>
               </li>
               <li>
-                <a href="/full-service-design">Full-Service Design</a>
+                <Link to="/full-service-design">Full-Service Design</Link>
               </li>
               </div>
               </li>
              
               <li>
-                <a href="/faq">FAQs</a>
+                <Link to="/faq">FAQs</Link>
               </li>
               <li>
-                <a href="/blog">Blog</a>
+                <Link to="/blog">Blog</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </nav>

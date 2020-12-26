@@ -127,7 +127,7 @@ class UpdateItem extends Component {
                 <div>
                     <p className="text-center">Item updated!</p>
                     <AdminPanel itemUpdated="true"></AdminPanel>
-                    {/* <a href="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></a> */}
+                    {/* <Link to="/admin"><Button style={{ backgroundColor: '#dd6717', margin: '0px auto;' }} variant='dark'>Inventory List</Button></Link> */}
                 </div>
             )
         }

@@ -1,6 +1,7 @@
 import { Container, Nav, Button, Image } from "react-bootstrap";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component, useState } from "react";
+import { Link } from "react-router-dom"
 // import logo from './logo.svg';
 import "./style.css";
 import { Drawer } from "@material-ui/core";
@@ -8,7 +9,7 @@ import Hero from "../../components/Hero";
 import heroImg from "../../media/bread.jpg";
 import Footer from "../../components/Footer/footer";
 import Prismic from "prismic-javascript";
-import { Date, Link, RichText } from "prismic-reactjs";
+// import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
 // import logo from '../../media/logo.png'
 require("dotenv").config();
@@ -30,7 +31,7 @@ export default function Blog() {
     const fetchData = async () => {
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "blog")
-      );
+      )
       if (response) {
         setDocData(response.results);
         console.log(response.results);
@@ -43,14 +44,14 @@ export default function Blog() {
     var data = doc.map(
       (post) => (
         <div className="blog-post">
-          <a href={`/blog/${post.uid}`}>
+          <Link to={`/blog/${post.uid}`}>
             <div>{post.data.title[0].text}</div>
             <img
               className="blog-img"
               alt="cover"
               src={post.data.blog_image.url}
             />
-          </a>
+          </Link>
         </div>
       )
       // <div>post</div>

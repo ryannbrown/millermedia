@@ -1,6 +1,7 @@
 import { Container, Nav, Button, Image, Col, Row } from "react-bootstrap";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component } from "react";
+import { Link } from "react-router-dom"
 // import logo from "../../media/stamplogo.png";
 import "./style.css";
 var _ = require("lodash");
@@ -26,11 +27,11 @@ export default class Footer extends Component {
         <div className="greyfooter">
           <div className="greyfooter-content">
             <h3 className="item">{this.props.text}</h3>
-            <a href={this.props.link}>
+            <Link to={this.props.link}>
               <button className="item" className="connect-btn">
                 {this.props.button}
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="darkfooter">
@@ -47,14 +48,14 @@ export default class Footer extends Component {
             <div>
               <p>NAVIGATE</p>
               <br></br>
-              <a href="/"><p>Home</p></a>
-              <a href="/about"><p>About</p></a>
-              <a href="/Services"><p>Services</p></a>
-              <a href="/ppc"><p>PPC Advertising</p></a>
-              <a href="/logo-design-branding"><p>Logo + Branding</p></a>
-              <a href="/full-service-design"><p>Full-Service Design</p></a>
-              <a href="/faq"><p>FAQs</p></a>
-              <a href="/contact"><p>Contact</p></a>
+              <Link to="/"><p>Home</p></Link>
+              <Link to="/about"><p>About</p></Link>
+              <Link to="/Services"><p>Services</p></Link>
+              <Link to="/ppc"><p>PPC Advertising</p></Link>
+              <Link to="/logo-design-branding"><p>Logo + Branding</p></Link>
+              <Link to="/full-service-design"><p>Full-Service Design</p></Link>
+              <Link to="/faq"><p>FAQs</p></Link>
+              <Link to="/contact"><p>Contact</p></Link>
            
             </div>
             <div>

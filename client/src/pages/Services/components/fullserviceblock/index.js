@@ -11,7 +11,7 @@ import office from "../../../../media/office.jpg";
 import branding from "../../../../media/branding.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faGlassMartini } from "@fortawesome/free-solid-svg-icons";
-
+import {Link} from "react-router-dom"
 export default class Fullserviceblock extends Component {
   render() {
     return (
@@ -58,11 +58,11 @@ export default class Fullserviceblock extends Component {
                   task you need tackling. Just fill out the form and we'll take
                   care of the rest!
                 </p>
-                <a href="/ppc">
+                <Link to="/ppc">
                   <Button className="about-lead-btn" variant="outline-dark">
                     CHECK OUT OUR PRICING
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -88,11 +88,11 @@ export default class Fullserviceblock extends Component {
                   discount 3-month initial commitment
                 </p>
                 <p><i>$650/mo</i></p>
-                <a href="/logo-design-branding">
+                <Link to="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
                   </Button>
-                </a>
+                </Link>
               </div>
               <div className="logo-branding-text">
                 <h3>Gold</h3>
@@ -101,11 +101,11 @@ export default class Fullserviceblock extends Component {
                   discount 3-month initial commitment
                 </p>
                 <p><i>$1,200/mo</i></p>
-                <a href="/logo-design-branding">
+                <Link to="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
                   </Button>
-                </a>
+                </Link>
               </div>
               <div className="logo-branding-text">
                 <h3>Platinum</h3>
@@ -114,11 +114,11 @@ export default class Fullserviceblock extends Component {
                   discount 3-month initial commitment
                 </p>
                 <p><i>$2,200/mo</i></p>
-                <a href="/logo-design-branding">
+                <Link to="/logo-design-branding">
                   <Button className="about-lead-btn" variant="outline-dark">
                     INQUIRE
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
             </div>

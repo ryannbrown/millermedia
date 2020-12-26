@@ -9,7 +9,8 @@ import Hero from '../../components/Hero'
 import heroImg from "../../media/bread.jpg"
 import Footer from '../../components/Footer/footer'
 import Prismic from 'prismic-javascript'
-import { Date, Link, RichText } from 'prismic-reactjs'
+import {Link} from 'react-router-dom'
+import { RichText } from 'prismic-reactjs'
 import linkResolver from "../../utils/linkResolver"
 // import "./style.css"
 // import logo from '../../media/logo.png'
@@ -47,10 +48,10 @@ const [doc, setDocData] = React.useState(null)
         // if (doc) {
         //     var data = doc.map((post) =>
         //     <div>
-        //         <a href={`/blog/${post.slugs[0]}`}>
+        //         <Link to={`/blog/${post.slugs[0]}`}>
         //         <div>{post.data.title[0].text}</div>
         //         <img alt='cover' src={post.data.blog_image.url} />
-        //         </a>
+        //         </Link>
         //     </div>
         //     // <div>post</div>
         //     // <h1>{RichText.asText(doc.data.title)}</h1>
@@ -66,7 +67,7 @@ const [doc, setDocData] = React.useState(null)
                     {
                         doc ? (
                             <div>
-                                <a href="/blog">back</a>
+                                <Link to="/blog">back</Link>
                             <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             {/* <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
