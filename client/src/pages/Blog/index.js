@@ -11,7 +11,10 @@ import Footer from "../../components/Footer/footer";
 import Prismic from "prismic-javascript";
 // import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
+import { RichText } from 'prismic-reactjs'
+import { format, parseISO } from 'date-fns'
 // import logo from '../../media/logo.png'
+
 require("dotenv").config();
 const { REACT_APP_PRISMIC_API, REACT_APP_PRISMIC_TOKEN } = process.env;
 
@@ -41,7 +44,31 @@ export default function Blog() {
   }, []);
 
   if (doc) {
-    var data = doc.map(
+    var firstPost = doc.slice(0,1).map(
+      (post) => (
+        <div className="blog-post">
+          {/* <Link to={`/blog/${post.uid}`}> */}
+       
+            <img
+              className="blog-img"
+              alt="cover"
+              src={post.data.blog_image.url}
+            />
+                 <div className="date-cat">
+                   <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
+                   <p>{post.data.category[0].text}</p>
+                   {/* <p>{post.data.category[0].text}</p> */}
+                   </div>
+                   <h1>{post.data.title[0].text}</h1>
+                   <RichText render={post.data['meta-description']} linkResolver={linkResolver} />
+                   <button>Read More</button>
+          {/* </Link> */}
+        </div>
+      )
+      // <div>post</div>
+      // <h1>{RichText.asText(doc.data.title)}</h1>
+    );
+    var nextThreePosts = doc.slice(1,4).map(
       (post) => (
         <div className="blog-post">
           <Link to={`/blog/${post.uid}`}>
@@ -65,11 +92,21 @@ export default function Blog() {
       <div className="home-wrapper">
         <div>
           {doc ? (
+            <div className="blog-page">
+            <div className="blog-left">
+              <div className="recent-block">
+              {firstPost}
+                </div>
             <div className="blog-wrapper">
-              {data}
+            
+              {nextThreePosts}
               {/* <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
+                            </div>
+                  </div>  
+                  <div className="blog-right" >
+                    </div>        
             </div>
           ) : (
             <div>No content</div>

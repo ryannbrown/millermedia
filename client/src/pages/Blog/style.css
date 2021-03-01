@@ -19,3 +19,12 @@
     height:200px;
     width:auto;
 }
+
+.date-cat {
+    display:flex;
+    justify-content: center;
+}
+
+.date-cat * {
+    margin:0px 10px;
+}
