@@ -1,7 +1,7 @@
 import { Container, Nav, Button, Image } from "react-bootstrap";
 import { Navbar, NavDropdown } from "react-bootstrap";
 import React, { Component, useState } from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 // import logo from './logo.svg';
 import "./style.css";
 import { Drawer } from "@material-ui/core";
@@ -11,8 +11,11 @@ import Footer from "../../components/Footer/footer";
 import Prismic from "prismic-javascript";
 // import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
-import { RichText } from 'prismic-reactjs'
-import { format, parseISO } from 'date-fns'
+import { RichText } from "prismic-reactjs";
+import { format, parseISO } from "date-fns";
+import fam from '../../media/fam.jpg'
+import uniq from 'lodash/uniq';
+import _ from 'lodash'
 // import logo from '../../media/logo.png'
 
 require("dotenv").config();
@@ -28,57 +31,106 @@ export default function Blog() {
   var Client = Prismic.client(apiEndpoint, { accessToken });
 
   const [doc, setDocData] = React.useState(null);
+  const [cats, setCats] = React.useState(null);
+
+
+  const fetchCategories = (data) => {
+  let allCats = []
+  data.forEach((post) => {
+    allCats.push(post.data.category[0].text)
+  })
+  console.log(allCats)
+    let uniqueCats = _.uniq(allCats)
+    setCats(uniqueCats)
+  }
 
   React.useEffect(() => {
     console.log("hey man!");
     const fetchData = async () => {
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "blog")
-      )
+      );
       if (response) {
         setDocData(response.results);
+        fetchCategories(response.results)
         console.log(response.results);
       }
     };
     fetchData();
   }, []);
 
-  if (doc) {
-    var firstPost = doc.slice(0,1).map(
+  if (doc && cats) {
+    var firstPost = doc.slice(0, 1).map(
       (post) => (
         <div className="blog-post">
           {/* <Link to={`/blog/${post.uid}`}> */}
-       
-            <img
-              className="blog-img"
-              alt="cover"
-              src={post.data.blog_image.url}
+
+          <img
+            className="latest-blog-img"
+            alt="cover"
+            src={post.data.blog_image.url}
+          />
+          <div className="date-cat">
+            <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
+            <p>●</p>
+            <p>{post.data.category[0].text}</p>
+            {/* <p>{post.data.category[0].text}</p> */}
+          </div>
+          <h1>{post.data.title[0].text}</h1>
+          <p className="ta-left">
+            <RichText
+              render={post.data["meta-description"]}
+              linkResolver={linkResolver}
             />
-                 <div className="date-cat">
-                   <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
-                   <p>{post.data.category[0].text}</p>
-                   {/* <p>{post.data.category[0].text}</p> */}
-                   </div>
-                   <h1>{post.data.title[0].text}</h1>
-                   <RichText render={post.data['meta-description']} linkResolver={linkResolver} />
-                   <button>Read More</button>
-          {/* </Link> */}
+          </p>
+             <Link to={`/blog/${post.uid}`}>
+          <button className="about-lead-btn">Read More</button>
+          </Link>
         </div>
       )
       // <div>post</div>
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
-    var nextThreePosts = doc.slice(1,4).map(
+    var categories = cats.map(
+      (cat) => (
+        <div className="blog-category">
+          <p>{cat}</p>
+          <div className="opacity-layer">
+
+          </div>
+        </div>
+      )
+      // <div>post</div>
+      // <h1>{RichText.asText(doc.data.title)}</h1>
+    );
+    var nextThreePosts = doc.slice(1, 4).map(
       (post) => (
-        <div className="blog-post">
-          <Link to={`/blog/${post.uid}`}>
-            <div>{post.data.title[0].text}</div>
-            <img
-              className="blog-img"
-              alt="cover"
-              src={post.data.blog_image.url}
+        <div className="list-blog-post">
+          {/* <Link to={`/blog/${post.uid}`}> */}
+          <div
+            className="blog-img"
+            alt="cover"
+            style={{backgroundImage: `url(${post.data.blog_image.url})`}}
+            // src={post.data.blog_image.url}
+          />
+          <div className="blog-details">
+            <h1>{post.data.title[0].text}</h1>
+            <div className="date-cat">
+              <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
+              <p className="lil-circle">●</p>
+              <p>{post.data.category[0].text}</p>
+            </div>
+            <p className="ta-left list-description">
+            <RichText
+              render={post.data["meta-description"]}
+              linkResolver={linkResolver}
             />
+          </p>
+          <Link to={`/blog/${post.uid}`}>
+          <button className="about-lead-btn">View Post</button>
           </Link>
+          </div>
+          {/* </Link> */}
         </div>
       )
       // <div>post</div>
@@ -87,31 +139,60 @@ export default function Blog() {
   }
 
   return (
-    <div>
+    <div className="blog-page">
       <Hero image={heroImg} title="Blog" button="Read up!" />
       <div className="home-wrapper">
-        <div>
+      
           {doc ? (
             <div className="blog-page">
-            <div className="blog-left">
-              <div className="recent-block">
-              {firstPost}
-                </div>
-            <div className="blog-wrapper">
-            
-              {nextThreePosts}
-              {/* <h1>{RichText.asText(doc.data.title)}</h1>
+              <div className="blog-left">
+                <div className="recent-block">{firstPost}</div>
+                  <div className="blog-wrapper">
+                <div className="blog-list-box">
+                  <div className="vert-line-blog"></div>
+                    </div>
+                    {nextThreePosts}
+                    {/* <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-                            </div>
-                  </div>  
-                  <div className="blog-right" >
-                    </div>        
+                            <button className="about-lead-btn">older posts</button>
+                </div>
+              </div>
+              <div className="blog-right">
+                <div className="blog-about">
+                  <div className="about-img" style={{backgroundImage:`url(${fam})`}}/>
+                  <h3>We're the millers</h3>
+                  <p>Integer dapibus a massa a finibus. Aenean finibus risus et sapien sodales, in mollis libero tempus. Praesent elementum purus eros, et commodo dolor tincidunt facilisis.</p>
+                  <button className="about-lead-btn">About MMP</button>
+                </div>
+                <div className="blog-connect">
+                  <div className="connect-content">
+                    <h3>Connect</h3>
+                    <div>
+                    <i class="lni lni-facebook-filled"></i>
+                    <i class="lni lni-pinterest"></i>
+                    <i class="lni lni-instagram"></i>
+                    <i class="lni lni-envelope"></i>
+                    </div>
+                  </div>
+                  </div>
+                  <div className="blog-search">
+                    <h3>Looking for something?</h3>
+                    <input placeholder="SEARCH THE BLOG"></input>
+                  </div>
+                  <div className="blog-categories">
+                    <h3>Categories</h3>
+                    <div className="cat-wrapper">
+                            {categories}
+                      </div>
+                    </div>
+               
+              </div>
             </div>
           ) : (
             <div>No content</div>
           )}
-        </div>
+     
       </div>
       <Footer
         text="Want more info?"

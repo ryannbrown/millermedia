@@ -61,7 +61,7 @@ export default class Footer extends Component {
     const { isMobile } = this.state;
 
     return (
-      <div>
+      <div style={{clear: 'both'}}>
         {!isMobile? <DesktopFooter logo={logo} text={this.props.text} button={this.props.button} link={this.props.link}></DesktopFooter> :
         <MobileFooter logo={logo} text={this.props.text} button={this.props.button} link={this.props.link}></MobileFooter>}
       </div>

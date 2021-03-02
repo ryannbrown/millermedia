@@ -1,0 +1,12 @@
+.blog-post-page .blog-list-box {
+    background-color:transparent;
+}
+
+.blog-post-page .latest-blog-img {
+    margin-bottom:50px;
+}
+
+.blog-post-page .date-cat + h1 {
+    text-align:center;
+    margin:15px 0px;
+}

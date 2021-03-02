@@ -11,7 +11,9 @@ import Footer from '../../components/Footer/footer'
 import Prismic from 'prismic-javascript'
 import {Link} from 'react-router-dom'
 import { RichText } from 'prismic-reactjs'
-import linkResolver from "../../utils/linkResolver"
+import { format, parseISO } from "date-fns";
+import linkResolver from "../../utils/linkResolver";
+import fam from '../../media/fam.jpg'
 // import "./style.css"
 // import logo from '../../media/logo.png'
 
@@ -60,26 +62,85 @@ const [doc, setDocData] = React.useState(null)
 
         return (
 
-            <div>
-                <Hero image={heroImg} title="Blog" button="Read up!" />
-                <div className="home-wrapper">
-                    <div>
-                    {
-                        doc ? (
-                            <div>
-                                <Link to="/blog">back</Link>
-                            <h1>{RichText.asText(doc.data.title)}</h1>
-                             <img alt='cover' src={doc.data.blog_image.url} />
-                            {/* <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-                            {/* <p>{doc.data.blog_text[0].text}</p> */}
-                            <RichText render={doc.data.blog_text} linkResolver={linkResolver} />
-                            </div>
-                        ) : <div>No content</div>
-                        }
+            <div className="blog-post-page">
+            <Hero image={heroImg} title="Blog" button="Read up!" />
+            <div className="home-wrapper">
+            
+                {doc ? (
+                  <div className="blog-page">
+                    <div className="blog-left">
+                      {/* <div className="recent-block">{firstPost}</div> */}
+                        <div className="blog-wrapper">
+                        <div className="date-cat">
+            <p>{format(new Date(doc.data.date), "MMMM DD, YYYY")}</p>
+            <p>●</p>
+            <p>{doc.data.category[0].text}</p>
+            {/* <p>{post.data.category[0].text}</p> */}
+          </div>
+          <h1>{doc.data.title[0].text}</h1>
+          <img
+            className="latest-blog-img"
+            alt="cover"
+            src={doc.data.blog_image.url}
+          />
+          <p className="ta-left">
+            <RichText
+              render={doc.data.blog_text}
+              linkResolver={linkResolver}
+            />
+          </p>
+                      <div className="blog-list-box">
+                        <div className="vert-line-blog"></div>
+                          </div>
+                          {/* {nextThreePosts} */}
+                          {/* <h1>{RichText.asText(doc.data.title)}</h1>
+                                   <img alt='cover' src={doc.data.blog_image.url} />
+                                  <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
+                                  <button className="about-lead-btn">older posts</button>
+                      </div>
                     </div>
-                </div>
-                <Footer text="Want more info?" button="PEEK AT OUR FAQs" link="/faq"></Footer>
+                    <div className="blog-right">
+                      <div className="blog-about">
+                        <div className="about-img" style={{backgroundImage:`url(${fam})`}}/>
+                        <h3>We're the millers</h3>
+                        <p>Integer dapibus a massa a finibus. Aenean finibus risus et sapien sodales, in mollis libero tempus. Praesent elementum purus eros, et commodo dolor tincidunt facilisis.</p>
+                        <button className="about-lead-btn">About MMP</button>
+                      </div>
+                      <div className="blog-connect">
+                        <div className="connect-content">
+                          <h3>Connect</h3>
+                          <div>
+                          <i class="lni lni-facebook-filled"></i>
+                          <i class="lni lni-pinterest"></i>
+                          <i class="lni lni-instagram"></i>
+                          <i class="lni lni-envelope"></i>
+                          </div>
+                        </div>
+                        </div>
+                        <div className="blog-search">
+                          <h3>Looking for something?</h3>
+                          <input placeholder="SEARCH THE BLOG"></input>
+                        </div>
+                        <div className="blog-categories">
+                          <h3>Categories</h3>
+                          <div className="cat-wrapper">
+                                  {/* {categories} */}
+                            </div>
+                          </div>
+                     
+                    </div>
+                  </div>
+                ) : (
+                  <div>No content</div>
+                )}
+           
             </div>
+            <Footer
+              text="Want more info?"
+              button="PEEK AT OUR FAQs"
+              link="/faq"
+            ></Footer>
+          </div>
         )
 
     }
