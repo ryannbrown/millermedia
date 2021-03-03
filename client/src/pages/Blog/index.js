@@ -45,6 +45,8 @@ export default function Blog() {
     let uniqueCats = _.uniq(allCats)
     setCats(uniqueCats)
   }
+
+
   const searchByCat = (e) => {
     let cat = e.currentTarget.textContent;
     console.log(cat)
@@ -52,9 +54,14 @@ export default function Blog() {
 const fetchData = async (cat) => {
   console.log(cat)
   const response = await Client.query(
+    // Prismic.Predicates.at('document.type', 'blog'),
+
+
     // [
     // Prismic.Predicates.at("document.type", "blog"),
-    Prismic.Predicates.any("my.blog.category_name", cat)
+    Prismic.Predicates.at("my.blog.category_name", cat),
+    { orderings: "[my.blog.date desc]" }
+  
   // ]
   );
   if (response) {

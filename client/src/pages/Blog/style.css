@@ -284,6 +284,27 @@ padding-bottom:15px;
     align-items: center;
 }
 
+.blog-category:nth-of-type(2) {
+    background-image:url('../../media/desk.jpg');
+    background-position-y: 35%;
+}
+.blog-category:nth-of-type(3) {
+    background-image:url('../../media/branding.jpg');
+    background-position-y: 35%;
+}
+.blog-category:nth-of-type(4) {
+    background-image:url('../../media/workimage.jpg');
+    background-position-y: 35%;
+}
+.blog-category:nth-of-type(4) {
+    background-image:url('../../media/ppc-min.jpg');
+    background-position-y: 35%;
+}
+.blog-category:nth-of-type(5) {
+    background-image:url('../../media/fbads-min.jpg');
+    background-position-y: 35%;
+}
+
 .blog-category:hover{
     opacity:.75;
     cursor:pointer;
