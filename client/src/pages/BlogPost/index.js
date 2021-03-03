@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 import { RichText } from "prismic-reactjs";
 import { format, parseISO } from "date-fns";
 import linkResolver from "../../utils/linkResolver";
+import ClipLoader from "react-spinners/ClipLoader";
 import {
     EmailShareButton,
   FacebookShareCount,
@@ -161,8 +162,9 @@ if (posts) {
       <Hero image={heroImg} title="Blog" button="Read up!" />
       <div className="home-wrapper">
         {doc ? (
-          <div className="blog-page">
+            <div className="blog-page">
             <div className="blog-left">
+                <Link to="/blog"><i class="lni lni-arrow-left"></i> Back </Link>
               {/* <div className="recent-block">{firstPost}</div> */}
               <div className="blog-wrapper">
                 <div className="date-cat">
@@ -210,7 +212,7 @@ if (posts) {
     {nextPost &&<Link to={`/blog/${nextPost.uid}`}><button onClick={updateParams} className="dark-btn">NEXT POST</button></Link>  }
 
     </div>
-                    <h3 className="recent-text">Recent Posts</h3>
+                    <h2 className="recent-text">Recent Posts</h2>
                 <div className="recent-wrapper">
                 <div className="blog-list-box">
                 </div>
@@ -257,14 +259,23 @@ if (posts) {
             </div>
           </div>
         ) : (
-          <div>No content</div>
+            <div className="loading-block">
+
+            <ClipLoader
+            // css={override}
+            className="clippy"
+            size={35}
+            color={"#3f3f3f"}
+            // loading={this.state.loading}
+          />
+          </div>
         )}
       </div>
-      <Footer
+      {/* <Footer
         text="Want more info?"
         button="PEEK AT OUR FAQs"
         link="/faq"
-      ></Footer>
+      ></Footer> */}
     </div>
   );
 }

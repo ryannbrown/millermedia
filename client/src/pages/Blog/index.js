@@ -14,6 +14,7 @@ import linkResolver from "../../utils/linkResolver";
 import { RichText } from "prismic-reactjs";
 import { format, parseISO } from "date-fns";
 import fam from '../../media/fam.jpg'
+import ClipLoader from "react-spinners/ClipLoader";
 import uniq from 'lodash/uniq';
 import _ from 'lodash'
 // import logo from '../../media/logo.png'
@@ -66,6 +67,26 @@ fetchData(cat);
 
   }
 
+  const textSearch = (e) => {
+    console.log(e.target.value)
+    let query = e.target.value;
+    const fetchData = async (query) => {
+      // console.log(cat)
+      const response = await Client.query([
+        Prismic.Predicates.at('document.type', 'blog'),
+        Prismic.Predicates.fulltext('document', query)
+    ]);
+      // if (response.results.length > 0) {
+      if (response) {
+        setDocData(response.results);
+        // fetchCategories(response.results)
+        console.log(response.results);
+      }
+    };
+    fetchData(query)
+
+
+  }
   const showAllPosts = () => {
     setMaxPosts(maxPosts + 3)
   }
@@ -81,8 +102,8 @@ fetchData(cat);
         { orderings: "[my.blog.date desc]" }
       );
       if (response) {
-        setDocData(response.results);
         fetchCategories(response.results)
+          setDocData(response.results);    
         console.log(response.results);
       }
     };
@@ -177,18 +198,30 @@ fetchData(cat);
           {doc ? (
             <div className="blog-page">
               <div className="blog-left">
+              {doc.length < 1 && <div className="search-error">
+               <h1> We are sorry,</h1> 
+               <p>there appear to be no posts associated with your search.</p>
+               <p>Feel free to alter your search, or return to our latest posts</p>
+              <a href="/blog" ><button className="dark-btn">See Latest Posts</button></a>
+              
+                    </div>}
                 <div className="recent-block">{firstPost}</div>
+                {doc.length > 1 &&
+              <div>
                   <div className="blog-wrapper">
                 <div className="blog-list-box">
                   <div className="vert-line-blog"></div>
                     </div>
-                    {nextThreePosts}
+                     <div>{nextThreePosts}</div>
+                    {/* {nextThreePosts} */}
                     {/* <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
                             {maxPosts <= 4 && <button onClick={showAllPosts} className="dark-btn">older posts</button> }
                             {maxPosts > 4 && <button onClick={showRecentPosts} className="dark-btn">Show only recent</button> }
                 </div>
+                </div>
+                  }
               </div>
               <div className="blog-right">
                 <div className="blog-about">
@@ -210,7 +243,7 @@ fetchData(cat);
                   </div>
                   <div className="blog-search">
                     <h3>Looking for something?</h3>
-                    <input placeholder="SEARCH THE BLOG"></input>
+                    <input onChange={textSearch} placeholder="SEARCH THE BLOG"></input>
                   </div>
                   <div className="blog-categories">
                     <h3>Categories</h3>
@@ -222,7 +255,16 @@ fetchData(cat);
               </div>
             </div>
           ) : (
-            <div>No content</div>
+            <div className="loading-block">
+
+  <ClipLoader
+  // css={override}
+  className="clippy"
+  size={35}
+  color={"#3f3f3f"}
+  // loading={this.state.loading}
+/>
+</div>
           )}
      
       </div>
