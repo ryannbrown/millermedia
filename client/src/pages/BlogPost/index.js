@@ -35,6 +35,7 @@ export default function BlogPost(props) {
   const Client = Prismic.client(apiEndpoint, { accessToken });
 
   const [newParam, setNewParam] = React.useState(null);
+  const [posts, setPostsData] = React.useState(null);
   const [doc, setDocData] = React.useState(null);
   const [shareUrl, setShareUrl] = React.useState(null);
   const [prevPost, setPrevPost] = React.useState(null);
@@ -79,9 +80,23 @@ export default function BlogPost(props) {
   };
 
 
+  const fetchPosts = async () => {
+    const response = await Client.query(
+      Prismic.Predicates.at("document.type", "blog"),
+      { orderings: "[my.blog.date desc]" }
+    );
+    if (response) {
+      setPostsData(response.results);
+    //   fetchCategories(response.results)
+      console.log(response.results);
+    }
+  };
+
+
   const updateParams = () => {
 setNewParam(props.match.params.post)
   }
+  
 
   React.useEffect(() => {
       console.log(newParam)
@@ -101,6 +116,7 @@ setNewParam(props.match.params.post)
 
     fetchPlugins();
     fetchData();
+    fetchPosts();
   }, [newParam]);
 
   // if (doc) {
@@ -115,6 +131,30 @@ setNewParam(props.match.params.post)
   //     // <h1>{RichText.asText(doc.data.title)}</h1>
   // );
   // }
+
+
+if (posts) {
+    var threeRecentPosts = posts.slice(0,3).map(
+        (post) => (
+              <Link onClick={updateParams} to={`/blog/${post.uid}`}>
+          <div className="list-blog-post">
+          
+            <div
+              className="blog-img"
+              alt="cover"
+              style={{backgroundImage: `url(${post.data.blog_image.url})`}}
+              // src={post.data.blog_image.url}
+            />
+            
+              <h4 className="bold">{post.data.title[0].text}</h4>
+            </div>
+            </Link>
+        )
+     
+      );
+}
+
+
 
   return (
     <div className="blog-post-page">
@@ -145,7 +185,7 @@ setNewParam(props.match.params.post)
                 </p>
                 <div className="share-block">
                   <div className="share-btns">
-                    <p>SHARE</p>
+                    <h5>SHARE</h5>
                     <FacebookShareButton url={shareUrl}>
                       <i class="lni lni-facebook"></i>
                     </FacebookShareButton>
@@ -162,6 +202,7 @@ setNewParam(props.match.params.post)
           <i class="lni lni-linkedin"></i>
              </LinkedinShareButton> */}
                   </div>
+                  <h5>{doc.data.category_name}</h5>
                 </div>
 <div className="blog-nav-box">
      {prevPost && <Link to={`/blog/${prevPost.uid}`}><button onClick={updateParams} className="dark-btn">PREVIOUS POST</button></Link> }
@@ -169,15 +210,13 @@ setNewParam(props.match.params.post)
     {nextPost &&<Link to={`/blog/${nextPost.uid}`}><button onClick={updateParams} className="dark-btn">NEXT POST</button></Link>  }
 
     </div>
-
-
-                {/* <div className="blog-list-box">
-                </div> */}
-                {/* {nextThreePosts} */}
-                {/* <h1>{RichText.asText(doc.data.title)}</h1>
-                                   <img alt='cover' src={doc.data.blog_image.url} />
-                                  <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-                {/* <button className="about-lead-btn">older posts</button> */}
+                    <h3 className="recent-text">Recent Posts</h3>
+                <div className="recent-wrapper">
+                <div className="blog-list-box">
+                </div>
+                {threeRecentPosts}
+                </div>
+                {/* <button className="dark-btn">older posts</button> */}
               </div>
             </div>
             <div className="blog-right">
