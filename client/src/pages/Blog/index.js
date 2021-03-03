@@ -32,23 +32,53 @@ export default function Blog() {
 
   const [doc, setDocData] = React.useState(null);
   const [cats, setCats] = React.useState(null);
+  const [ maxPosts, setMaxPosts] = React.useState(4);
 
 
   const fetchCategories = (data) => {
   let allCats = []
   data.forEach((post) => {
-    allCats.push(post.data.category[0].text)
+    // allCats.push(post.data.category[0].text)
   })
   console.log(allCats)
     let uniqueCats = _.uniq(allCats)
     setCats(uniqueCats)
+  }
+  const searchByCat = (e) => {
+    let cat = e.currentTarget.textContent;
+    console.log(cat)
+//  console.log(e.currentTarget.textContent)
+const fetchData = async (cat) => {
+  console.log(cat)
+  const response = await Client.query(
+    // [
+    // Prismic.Predicates.at("document.type", "blog"),
+    Prismic.Predicates.any("my.blog.cat", "our services")
+  // ]
+  );
+  if (response) {
+    setDocData(response.results);
+    // fetchCategories(response.results)
+    console.log(response.results);
+  }
+};
+fetchData(cat);
+
+  }
+
+  const showAllPosts = () => {
+    setMaxPosts(maxPosts + 3)
+  }
+  const showRecentPosts = () => {
+    setMaxPosts(4)
   }
 
   React.useEffect(() => {
     console.log("hey man!");
     const fetchData = async () => {
       const response = await Client.query(
-        Prismic.Predicates.at("document.type", "blog")
+        Prismic.Predicates.at("document.type", "blog"),
+        { orderings: "[my.blog.date desc]" }
       );
       if (response) {
         setDocData(response.results);
@@ -73,7 +103,7 @@ export default function Blog() {
           <div className="date-cat">
             <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
             <p>●</p>
-            <p>{post.data.category[0].text}</p>
+            <p>{post.data.category_name}</p>
             {/* <p>{post.data.category[0].text}</p> */}
           </div>
           <h1>{post.data.title[0].text}</h1>
@@ -84,7 +114,7 @@ export default function Blog() {
             />
           </p>
              <Link to={`/blog/${post.uid}`}>
-          <button className="about-lead-btn">Read More</button>
+          <button className="dark-btn">Read More</button>
           </Link>
         </div>
       )
@@ -93,7 +123,7 @@ export default function Blog() {
     );
     var categories = cats.map(
       (cat) => (
-        <div className="blog-category">
+        <div onClick={searchByCat} data={cat} className="blog-category">
           <p>{cat}</p>
           <div className="opacity-layer">
 
@@ -103,7 +133,8 @@ export default function Blog() {
       // <div>post</div>
       // <h1>{RichText.asText(doc.data.title)}</h1>
     );
-    var nextThreePosts = doc.slice(1, 4).map(
+  //  let theMaxPosts = 4;
+    var nextThreePosts = doc.slice(1, maxPosts).map(
       (post) => (
         <div className="list-blog-post">
           {/* <Link to={`/blog/${post.uid}`}> */}
@@ -118,7 +149,7 @@ export default function Blog() {
             <div className="date-cat">
               <p>{format(new Date(post.data.date), "MMMM DD, YYYY")}</p>
               <p className="lil-circle">●</p>
-              <p>{post.data.category[0].text}</p>
+              <p>{post.data.category_name}</p>
             </div>
             <p className="ta-left list-description">
             <RichText
@@ -155,7 +186,8 @@ export default function Blog() {
                     {/* <h1>{RichText.asText(doc.data.title)}</h1>
                              <img alt='cover' src={doc.data.blog_image.url} />
                             <RichText render={doc.data.description} linkResolver={linkResolver} /> */}
-                            <button className="about-lead-btn">older posts</button>
+                            {maxPosts <= 4 && <button onClick={showAllPosts} className="dark-btn">older posts</button> }
+                            {maxPosts > 4 && <button onClick={showRecentPosts} className="dark-btn">Show only recent</button> }
                 </div>
               </div>
               <div className="blog-right">

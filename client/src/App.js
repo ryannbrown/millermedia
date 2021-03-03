@@ -22,6 +22,7 @@ import Logodesignbranding from "./pages/Services/logodesignbranding/index"
 import Faq from "./pages/Faq/index.js"
 import Blog from "./pages/Blog/index.js"
 import BlogPost from "./pages/BlogPost/index.js"
+import ScrollToTop from "./utils/scrollToTop"
 // import BlogPost from "./pages/BlogPost/index.js"
 // import Footer from "./components/Footer/index.js"
 // import Portfolio from "./components/Portfolio/index"
@@ -43,6 +44,7 @@ function App() {
          {/* <Navigation/> */}
          <Router history = {history}>
          <Nav/>
+         <ScrollToTop / >
            <Switch>
              <Route path="/contact" component={Contact}/>
              <Route path="/faq" component={Faq}/>
