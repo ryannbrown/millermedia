@@ -38,7 +38,7 @@ export default function Blog() {
   const fetchCategories = (data) => {
   let allCats = []
   data.forEach((post) => {
-    // allCats.push(post.data.category[0].text)
+    allCats.push(post.data.category_name)
   })
   console.log(allCats)
     let uniqueCats = _.uniq(allCats)
@@ -53,7 +53,7 @@ const fetchData = async (cat) => {
   const response = await Client.query(
     // [
     // Prismic.Predicates.at("document.type", "blog"),
-    Prismic.Predicates.any("my.blog.cat", "our services")
+    Prismic.Predicates.any("my.blog.category_name", cat)
   // ]
   );
   if (response) {
@@ -158,7 +158,7 @@ fetchData(cat);
             />
           </p>
           <Link to={`/blog/${post.uid}`}>
-          <button className="about-lead-btn">View Post</button>
+          <button className="transparent-btn">View Post</button>
           </Link>
           </div>
           {/* </Link> */}
