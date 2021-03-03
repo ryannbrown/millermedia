@@ -82,7 +82,8 @@ fetchData(cat);
       const response = await Client.query([
         Prismic.Predicates.at('document.type', 'blog'),
         Prismic.Predicates.fulltext('document', query)
-    ]);
+    ],
+    { orderings: "[my.blog.date desc]" });
       // if (response.results.length > 0) {
       if (response) {
         setDocData(response.results);
