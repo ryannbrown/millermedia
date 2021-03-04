@@ -97,3 +97,28 @@
       text-align:center;
       margin:50px 0px;
   }
+
+  @media(max-width:950px) {
+    .blog-post-page .blog-wrapper {
+        margin:25px auto;
+    }
+      .blog-post-page .blog-left {
+          margin-top:25px;
+        float:unset;
+      }
+      .blog-post-page .blog-right {
+        float:unset;
+      }
+
+      .blog-post-page .list-blog-post {
+          width:175px;
+      }
+
+      .blog-post-page .recent-wrapper {
+          max-width:300px;
+          margin:0px auto;
+      }
+      .blog-post-page .blog-list-box {
+          width:300%;
+      }
+  }

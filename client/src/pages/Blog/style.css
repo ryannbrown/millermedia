@@ -19,7 +19,7 @@
     float:right;
     padding-left:10%;
     /* border: 1px solid black; */
-    height:2000px;
+    height:100%;
     min-height:100vh;
 }
 
@@ -342,4 +342,26 @@ padding-bottom:15px;
 
 .search-error *{
     margin:15px 0px;
+}
+
+
+@media (max-width:950px) {
+    .blog-page-wrapper {
+        display:flex;
+        flex-direction:column;
+    }
+
+    .blog-left {
+        width:80%;
+        margin:0px auto;
+    }
+    .blog-right {
+        width:80%;
+        margin:0px auto;
+        padding-left:0%;
+    }
+    .blog-category {
+        width:50%;
+        margin:50px auto;
+    }
 }

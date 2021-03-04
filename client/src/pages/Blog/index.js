@@ -204,7 +204,7 @@ fetchData(cat);
       <div className="home-wrapper">
       
           {doc ? (
-            <div className="blog-page">
+            <div className="blog-page-wrapper">
               <div className="blog-left">
               {doc.length < 1 && <div className="search-error">
                <h1> We are sorry,</h1> 
@@ -234,9 +234,9 @@ fetchData(cat);
               <div className="blog-right">
                 <div className="blog-about">
                   <div className="about-img" style={{backgroundImage:`url(${fam})`}}/>
-                  <h3>We're the millers</h3>
+                  <h3>We're the Millers</h3>
                   <p>Integer dapibus a massa a finibus. Aenean finibus risus et sapien sodales, in mollis libero tempus. Praesent elementum purus eros, et commodo dolor tincidunt facilisis.</p>
-                  <button className="about-lead-btn">About MMP</button>
+                  <Link to="/about"><button className="about-lead-btn">About MMP</button></Link>
                 </div>
                 <div className="blog-connect">
                   <div className="connect-content">
