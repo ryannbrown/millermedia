@@ -9,6 +9,7 @@ import Hero from "../../components/Hero";
 import heroImg from "../../media/bread.jpg";
 import Footer from "../../components/Footer/footer";
 import Prismic from "prismic-javascript";
+import ContactForm from "../../components/ContactForm"
 // import { Date, Link, RichText } from "prismic-reactjs";
 import linkResolver from "../../utils/linkResolver";
 import { RichText } from "prismic-reactjs";
@@ -276,7 +277,15 @@ fetchData(cat);
 </div>
           )}
      
+     
       </div>
+<div className="blog-contact-form">
+  <div className="top-shelf">
+    <h1>Questions?</h1>
+    <h1>Comments?</h1>
+  </div>
+<ContactForm></ContactForm>
+  </div>
       <Footer
         text="Want more info?"
         button="PEEK AT OUR FAQs"

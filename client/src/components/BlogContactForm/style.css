@@ -1,0 +1,7 @@
+.name-row {
+    width:50%;
+    display:inline-block;
+}
+.name-row:first-child .form-control{
+    border-right:none !important;
+}

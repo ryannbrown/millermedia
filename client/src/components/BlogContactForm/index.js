@@ -24,7 +24,7 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 require("dotenv").config();
 
-export default class ContactForm extends Component {
+export default class BlogContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -111,7 +111,7 @@ export default class ContactForm extends Component {
     const { itemPosted, chosenWork } = this.state;
 
     return (
-      <div className="form-container">
+      <div className="blog-form-container">
         <form
           // onSubmit={this.handleSubmit}
           action="https://getform.io/f/6ac3031f-0cf4-4ee8-bca8-b61aa15e16c0" method="POST"
@@ -124,9 +124,11 @@ export default class ContactForm extends Component {
           <Form.Group className="name-row">
             <Form.Control name="lastname" ref={this.last} type="text" placeholder="Last Name" />
           </Form.Group>
-          <Form.Group className="contact-row">
-            <Form.Control name="email"  ref={this.email} type="email" placeholder="Email" />
-            <Form.Control name="phone"  ref={this.phone} type="phone" placeholder="Phone (optional)" />
+          <Form.Group>
+            <Form.Control name="email" ref={this.email} type="email" placeholder="Email" />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control name="phone" ref={this.phone} type="phone" placeholder="Phone (optional)" />
           </Form.Group>
           <Form.Group>
             {/* {/* <Form.Label>Post Body</Form.Label> */}
