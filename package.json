@@ -31,7 +31,7 @@
     "ftp": "^0.3.10",
     "helmet": "^4.2.0",
     "jquery": "^3.5.1",
-    "knex": "^0.21.5",
+    "knex": "^0.21.19",
     "moment": "^2.27.0",
     "morgan": "^1.10.0",
     "nodemailer": "^6.4.11",
@@ -45,7 +45,8 @@
     "react-router-hash-link": "^1.2.2",
     "react-scroll-into-view": "^1.8.2",
     "react-share": "^4.4.0",
-    "react-spinners": "^0.10.6"
+    "react-spinners": "^0.10.6",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "concurrently": "^4.0.1"

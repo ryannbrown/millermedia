@@ -8,7 +8,7 @@ var fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 5000;
-
+const knex = require("knex")
 const nodemailer = require("nodemailer");
 const morgan = require('morgan');
 const router = require("express").Router();
@@ -32,49 +32,87 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-var knex = require('knex')({
-  client: 'postgres',
-  connection: {
-    host: 'localhost',
-    user: 'postgres',
-    password: 'Pass1234',
-    database: 'postgres'
-  }
-});
+
+ const db = knex({
+     client: "pg",
+     connection: process.env.CONNSTRING,
+     searchPath: ["knex", "public"],
+   });
 
 
+  //local
 
+// var db = require('knex')({
+//   client: 'postgres',
+//   connection: {
+//     host: 'localhost',
+//     user: 'postgres',
+//     password: 'Pass1234',
+//     database: 'postgres'
+//   }
+// });
 
-app.get('/getforms', function (req, response) {
-  knex.select().from('all_forms').returning('*').then(data => {
-    response.send(JSON.stringify({ data }))
+app.get("/api/reviews/:param", (req, res) => {
+    const {param } = req.params;
+  console.log(param)
+  db('reviews').where('blog_title', param)
+  .then(review => {
+    // console.log(review, "review")
+    if (review.length) {
+      // console.log(review)
+      res.json(review)
+    } else {
+      res.status(400).json([])
+    }
   })
-});
+  .catch(err => res.status(400).json('error getting review'))
+  });
 
 
 
+app.post('/api/postreview', function (req, response) {
+  console.log(req.body);
+  const { blog_id, blog_title, review_body, name, email, website } = req.body;
 
 
-app.post('/createform', function (req, res) {
-  const { name, date } = req.body;
-  knex('all_forms').insert({
-    name: name,
-    date: date
-  }).then(res.send('POST request to the homepage'))
+  db('reviews').insert([
+    {
+   date: new Date(),
+   blog_id,
+   blog_title,
+   review_body,
+   name,
+   email,
+   website
+    }]).then(response.send('POST request to the homepage'))
+  .catch(err => console.log(err))
 
-  // posts.push(data)
-
-
-}
-);
-
-
-app.delete('/delete', function (req, response) {
-  console.log("hiiiii")
-  const id = req.body.id;
-  console.log(id);
-  knex('all_forms').where('id', id).del().then(response.send('deleted item'))
 })
+
+
+
+
+
+// app.post('/createform', function (req, res) {
+//   const { name, date } = req.body;
+//   knex('all_forms').insert({
+//     name: name,
+//     date: date
+//   }).then(res.send('POST request to the homepage'))
+
+//   // posts.push(data)
+
+
+// }
+// );
+
+
+// app.delete('/delete', function (req, response) {
+//   console.log("hiiiii")
+//   const id = req.body.id;
+//   console.log(id);
+//   knex('all_forms').where('id', id).del().then(response.send('deleted item'))
+// })
 
 
 

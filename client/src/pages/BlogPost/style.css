@@ -98,6 +98,133 @@
       margin:50px 0px;
   }
 
+.blog-post-page .blog-content {
+    display:flex;
+}
+
+.blog-post-page .recent-wrapper {
+    margin:0px auto;
+}
+
+
+
+.comment-block {
+    margin:75px auto;
+    /* width:50%; */
+}
+
+.comment-form form {
+    display:flex;
+    margin:0px auto;
+    justify-content: center;
+}
+
+.comment-form-info {
+    align-items: center;
+}
+
+ .comment-message {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.comment-form-info {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.comment-message {
+    margin-left:50px;
+    width:400px;
+}
+
+.comment-message div {
+    text-align:right;
+}
+
+.comment-message * {
+    margin-top:15px;
+}
+.comment-message textarea {    
+    height:200px;
+    border: 2px solid rgba(210, 158, 17, 1);}
+.comment-message textarea:focus {
+    outline:none;
+}
+.comment-info {
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+}
+
+.comment-message .dark-btn {
+    width:105px;
+    ;
+}
+
+.comments-block{
+   width:1200px;
+   
+}
+
+.comments-container {
+    margin-top:50px;
+    padding:50px 0px;
+    display:flex;
+    justify-content: center;
+    min-height:200px;
+    background-color:rgb(241, 242, 242);
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-comment {
+    margin:50px 0px;
+}
+
+.blog-post-page .greyfooter{
+    display:none;
+}
+
+.comment-author {
+    color:rgba(210, 158, 17, 1);
+    text-transform: uppercase;
+}
+
+
+.reply-space {
+    margin-top:10px;
+    text-align:right;
+}
+
+
+.comment-form-info input {
+        /* margin-top:15px; */
+        background-color: transparent;
+        border-bottom:1px solid rgba(210, 158, 17, 1) !important;
+        width:100%;
+        padding:1.5rem 1rem;
+        border: none;
+        color: black;
+        border-radius: 0px;
+        text-align: center;
+    }
+    
+    .comment-form-info input:focus {
+        outline:none !important;
+        border:none;
+    }
+
+
+    @media(max-width:1250px) {
+        .comments-block {
+            max-width:90%;
+        }
+    }
+
+
   @media(max-width:950px) {
     .blog-post-page .blog-wrapper {
         margin:25px auto;
@@ -121,4 +248,13 @@
       .blog-post-page .blog-list-box {
           width:300%;
       }
+
+      /* .comments-block {
+          max-width:90%;
+      } */
   }
+
+
+
+
+
