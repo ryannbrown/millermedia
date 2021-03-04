@@ -307,7 +307,7 @@ if (comments) {
                     className="about-img"
                     style={{ backgroundImage: `url(${fam})` }}
                   />
-                  <h3>We're the millers</h3>
+                  <h3>We're the Millers</h3>
                   <p>
                     Integer dapibus a massa a finibus. Aenean finibus risus et
                     sapien sodales, in mollis libero tempus. Praesent elementum
