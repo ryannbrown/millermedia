@@ -48,6 +48,7 @@ export default function Blog() {
 
 
   const searchByCat = (e) => {
+    window.scrollTo(0,400);
     let cat = e.currentTarget.textContent;
     console.log(cat)
 //  console.log(e.currentTarget.textContent)
