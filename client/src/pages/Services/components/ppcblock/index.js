@@ -54,9 +54,9 @@ export default class Ppcblock extends Component {
                 their budget.
               </p>
               <Link to="/ppc">
-                <Button className="about-lead-btn" variant="outline-dark">
+                <button className="transparent-btn">
                   TAKE THE FIRST STEP
-                </Button>
+                </button>
               </Link>
             </div>
             <div className="ppc-grey-img-container">
@@ -92,9 +92,9 @@ export default class Ppcblock extends Component {
                 phone call away.
               </p>
               <Link to="/ppc">
-                <Button className="about-lead-btn" variant="outline-dark">
+                <button className="transparent-btn">
                   GET YOUR FREE CONSULTATION
-                </Button>
+                </button>
               </Link>
             </div>
           </div>

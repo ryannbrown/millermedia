@@ -25,7 +25,7 @@ export default class AboutAction extends Component {
              <p>That's why we love partnering with businesses like yours - to bring your goals to fruition.
 </p>
              <p>At Miller Media Partners, we leverage our combined experiences in advertising and design and work with you to reach your goals. Trust and transparency are the foundation of all of our services, interactions, and partnerships. You heard it right - we cut out all the canned responses of a typical agency and give it to you straight.</p>
-             <Button className="about-lead-btn" variant="outline-dark">SEE IF WE'RE A GOOD MATCH</Button>
+             <button className="transparent-btn">SEE IF WE'RE A GOOD MATCH</button>
          </div>
          {/* <div className="vertical-line-about"></div> */}
      </div>

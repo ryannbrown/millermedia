@@ -33,6 +33,7 @@ export default function Blog() {
   var Client = Prismic.client(apiEndpoint, { accessToken });
 
   const [doc, setDocData] = React.useState(null);
+  const [pageData, setPageData] = React.useState(null);
   const [cats, setCats] = React.useState(null);
   const [ maxPosts, setMaxPosts] = React.useState(4);
 
@@ -104,6 +105,20 @@ fetchData(cat);
     setMaxPosts(4)
   }
 
+  const fetchPageData = () => {
+    const fetchData = async () => {
+      const response = await Client.query(
+        Prismic.Predicates.at("document.type", "blog_page"),
+        // { orderings: "[my.blog.date desc]" }
+      );
+      if (response) {
+          setPageData(response.results[0]);    
+        console.log(response.results);
+      }
+    };
+    fetchData();
+  }
+
   React.useEffect(() => {
     console.log("hey man!");
     const fetchData = async () => {
@@ -117,6 +132,7 @@ fetchData(cat);
         console.log(response.results);
       }
     };
+    fetchPageData()
     fetchData();
   }, []);
 
@@ -205,7 +221,7 @@ fetchData(cat);
       <Hero image={heroImg} title="Blog" button="Read up!" />
       <div className="home-wrapper">
       
-          {doc ? (
+          {doc && pageData ? (
             <div className="blog-page-wrapper">
               <div className="blog-left">
               {doc.length < 1 && <div className="search-error">
@@ -237,8 +253,8 @@ fetchData(cat);
                 <div className="blog-about">
                   <div className="about-img" style={{backgroundImage:`url(${fam})`}}/>
                   <h3>We're the Millers</h3>
-                  <p>Integer dapibus a massa a finibus. Aenean finibus risus et sapien sodales, in mollis libero tempus. Praesent elementum purus eros, et commodo dolor tincidunt facilisis.</p>
-                  <Link to="/about"><button className="about-lead-btn">About MMP</button></Link>
+                  <p>{pageData.data.about_text[0].text}</p>
+                  <Link to="/about"><button className="transparent-btn">About MMP</button></Link>
                 </div>
                 <div className="blog-connect">
                   <div className="connect-content">

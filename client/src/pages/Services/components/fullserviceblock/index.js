@@ -59,9 +59,9 @@ export default class Fullserviceblock extends Component {
                   care of the rest!
                 </p>
                 <Link to="/ppc">
-                  <Button className="about-lead-btn" variant="outline-dark">
+                  <button className="transparent-btn">
                     CHECK OUT OUR PRICING
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -89,9 +89,9 @@ export default class Fullserviceblock extends Component {
                 </p>
                 <p><i>$650/mo</i></p>
                 <Link to="/logo-design-branding">
-                  <Button className="about-lead-btn" variant="outline-dark">
+                  <button className="transparent-btn">
                     INQUIRE
-                  </Button>
+                  </button>
                 </Link>
               </div>
               <div className="logo-branding-text">
@@ -102,9 +102,9 @@ export default class Fullserviceblock extends Component {
                 </p>
                 <p><i>$1,200/mo</i></p>
                 <Link to="/logo-design-branding">
-                  <Button className="about-lead-btn" variant="outline-dark">
+                  <button className="transparent-btn">
                     INQUIRE
-                  </Button>
+                  </button>
                 </Link>
               </div>
               <div className="logo-branding-text">
@@ -115,9 +115,9 @@ export default class Fullserviceblock extends Component {
                 </p>
                 <p><i>$2,200/mo</i></p>
                 <Link to="/logo-design-branding">
-                  <Button className="about-lead-btn" variant="outline-dark">
+                  <button className="transparent-btn">
                     INQUIRE
-                  </Button>
+                  </button>
                 </Link>
               </div>
             </div>
@@ -130,9 +130,9 @@ export default class Fullserviceblock extends Component {
             <p>$70/hour</p>
             <p>No initial commitment</p>
             <p>$150 design work deposit (applied to final cost)</p>
-            <Button className="about-lead-btn" variant="outline-dark">
+            <button className="transparent-btn">
               INQUIRE
-            </Button>
+            </button>
           </div>
         </div>
       </section>

@@ -25,9 +25,9 @@ export default class Brandingblock extends Component {
             From there, we gather all the intel we need to start conceptualizing some ideas, building different logos for you to choose from and, if needed, a full branding guide with guidelines that you can follow to ensure your business's collateral, signage, etc. is consistent.
             </p>
             <Link to="/ppc">
-              <Button className="about-lead-btn" variant="outline-dark">
+              <button className="transparent-btn">
                 GET STARTED
-              </Button>
+              </button>
             </Link>
           </div>
          <div className="branding-packages">
@@ -42,14 +42,14 @@ export default class Brandingblock extends Component {
                     <p>Looking to take the first step toward a brand that drops jaws? This package is the perfect place to start!</p>
                     <p>Please keep in mind that it can take several weeks to complete a logo from the initial design concepts to the final product.</p>
                     <p><i>$390</i></p>
-                    <Button className="about-lead-btn" variant="outline-dark">INQUIRE</Button>
+                    <button className="transparent-btn">INQUIRE</button>
                  </div>
                  <div className="branding-package">
                     <h3>Branding Package</h3>
                     <p>If you're looking to invest in making your brand a show-stopping, customer converting machine, this package has it all.</p>
                     <p>Including full logo design services in addition to brand guidelines and branding strategy, we work with you to bring it all together.</p>
                     <p><i>$1,690</i></p>
-                    <Button className="about-lead-btn" variant="outline-dark">INQUIRE</Button>
+                    <button className="transparent-btn">INQUIRE</button>
                  </div>
              </div>
          </div>

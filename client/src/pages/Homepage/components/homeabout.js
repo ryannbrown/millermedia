@@ -44,7 +44,7 @@ export default class HomeAbout extends Component {
              <p>Whether you're looking for full-service advertising or a standalone design package, we will work <i><strong>with</strong></i> you to achieve mutual success.</p>
              <p>So, what makes us different?</p>
              <p>It's simple - agencies think in 'win' scenarios. Partners think 'win-win'. And we're all about those 'win-wins'.</p>
-             <Button className="about-lead-btn" variant="outline-dark">GIVE US A SHOUT</Button>
+             <button className="transparent-btn" >GIVE US A SHOUT</button>
              </div>
          </div>
          <div className="vertical-line-about"></div>
