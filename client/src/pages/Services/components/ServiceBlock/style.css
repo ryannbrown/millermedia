@@ -63,8 +63,10 @@
 .collage-3 {
   position: relative;
   z-index: 400;
-  width: 100px;
+  width: 150px;
   height: 400px;
+  position: relative;
+  z-index: 400;
 }
 
 .collage-4 {
@@ -127,7 +129,7 @@
 }
 
 .logo-branding-text > * {
-  margin: 25px;
+  margin: 10px 25px;
 }
 
 .collage-two {
@@ -139,11 +141,6 @@
   position: relative;
   /* z-index:-50; */
   margin-bottom:5vh;
-}
-
-.collage-3 {
-  position: relative;
-  z-index: 400;
 }
 /* .collage-4 {
   position: relative;
@@ -176,14 +173,23 @@
 .service-block-logo-2 {
   transform: rotate(25deg);
   position: absolute;
-  right: 205px;
+  /* right: 205px; */
+  right: 275px;
+
   top: -50px;
   z-index: 999999;
 }
 
+
+
 @media (max-width: 768px) {
 
-  .ppc-text {
+  .ppc-block .ppc-text {
+    text-align:center;
+    width:75%;
+  }
+
+  .service-block .ppc-text {
     width: 65%;
     text-align: left;
     margin: 0px auto 0px 10px;
@@ -261,7 +267,7 @@
   }
 
   .logo-branding-text {
-    padding: 10px;
+    padding: 25px 10px;
     margin: 15px;
   }
 
@@ -278,8 +284,10 @@
   }
   .collage-3 {
     /* width: 25% !important; */
-    width:80px;
-    height:500px;
+    /* width:80px; */
+    width:100px;
+    /* height:500px; */
+    height:650px;
     z-index:-5;
   }
   .collage-4 {

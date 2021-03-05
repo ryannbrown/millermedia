@@ -214,6 +214,14 @@
 
 @media (max-width: 768px) {
 
+  .show-toggle {
+    margin-top:50px;
+  }
+
+  .about-page .greyfooter {
+    margin-top:50px;
+  }
+
   .toggled-faq {
     width: 100%;
   }
@@ -226,10 +234,14 @@
   }
 
   .image-container {
-    margin-top: 75px;
+    margin-top: 150px;
     text-align: center;
     justify-content: center;
     flex: 0 0 50%;
+  }
+
+  .image-container:last-of-type {
+    margin-bottom:50px;
   }
   .hover-text {
     opacity: 1;

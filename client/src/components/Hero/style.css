@@ -2,6 +2,7 @@
  @media (max-width:768px) {
     .home-img {
         height:100vh !important;
+        background-attachment:unset !important;
     }
     .home-img > * {
         margin: 5px;
