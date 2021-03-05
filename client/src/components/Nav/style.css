@@ -172,6 +172,10 @@ img.mobile-nav-logo {
 
 /**---- Menu Icon Effects ----**/
 
+#menu-toggle:checked +.mobile-bar {
+  position:fixed;
+}
+
 #menu-toggle:checked + .mobile-bar .menu-icon {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -258,6 +262,7 @@ text-align: center;
 color: #3F3F3F;
 transition:.6s;
 z-index:700;
+overflow:hidden;
 }
 
 /* customize color */

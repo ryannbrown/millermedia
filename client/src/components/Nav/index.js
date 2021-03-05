@@ -217,11 +217,11 @@ export default class Nav extends Component {
              to="/About">About</NavLink>
                 </li>
                 <li className="service-trigger">
-                  <input
+                  {/* <input
                     type="checkbox"
                     class="nav-down-toggle"
                     id="nav-toggle"
-                  ></input>
+                  ></input> */}
                   <FontAwesomeIcon className="nav-down" icon={faChevronDown} />
                   <NavLink activeClassName="active" to="/Services">Services</NavLink>
                   <div className="nav-services">
