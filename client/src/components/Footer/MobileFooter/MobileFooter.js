@@ -112,7 +112,7 @@ export default class MobileFooter extends Component {
           
           target="_blank"
           to="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3"
-        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | <a rel="noopenner" target="_blank" href="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3">Privacy Policy</a> </p></Link>
+        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | <a rel="noopenner" className="policy-link" target="_blank" href="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3">Privacy Policy</a> </p></Link>
         </div>
       
       </div>
