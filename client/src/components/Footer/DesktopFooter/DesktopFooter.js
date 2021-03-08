@@ -41,7 +41,7 @@ export default class Footer extends Component {
           </div>
           <div className="footer-wrapper">
             <div>
-              <p>STAY CURRENT</p>
+              <Link to="/blog"><p>STAY CURRENT</p></Link>
               <br></br>
               <button>BLOG</button>
             </div>
