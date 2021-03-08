@@ -52,7 +52,7 @@ We love working with our partners to turn their branding dreams into reality.</p
                     //   cover no-repeat center center fixed`
                 }}><Image className="stamp-img" src={mmp} width='150px'></Image>
                     <Link to="/services">
-                        <div className="lemon-btn tc">
+                        <div className="lemon-btn">
                         <p>Explore Our Services</p>
                         <Link onClick={this.scrollDown}><Image className="lemon-arrow center" src={arrow}></Image></Link>
                         </div>
