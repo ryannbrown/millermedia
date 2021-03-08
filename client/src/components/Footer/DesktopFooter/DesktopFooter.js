@@ -62,9 +62,9 @@ export default class Footer extends Component {
               <p>CONNECT WITH US</p>
               <div className="social-footer-wrapper">
               <a rel="noopenner" target="_blank" href="https://www.facebook.com/millermediapartners/"><i class="lni lni-facebook-filled"></i></a>
-                      <a rel="noopenner" target="_blank" href=" https://www.pinterest.com/abbymillerdesignco/_created/"><i class="lni lni-pinterest"></i></a>
-                      <a rel="noopenner" target="_blank" href="https://www.instagram.com/millermediapartners"><i class="lni lni-instagram"></i></a>
-                      <a href="mailto:info@millermediapartners.com"><i class="lni lni-envelope"></i></a>
+              <a rel="noopenner" target="_blank" href=" https://www.pinterest.com/abbymillerdesignco/_created/"><i class="lni lni-pinterest"></i></a>
+              <a rel="noopenner" target="_blank" href="https://www.instagram.com/millermediapartners"><i class="lni lni-instagram"></i></a>
+              <a href="mailto:info@millermediapartners.com"><i class="lni lni-envelope"></i></a>
                   
               </div>
             </div>
@@ -79,8 +79,8 @@ export default class Footer extends Component {
             <div>
               <p>KEEP IN TOUCH</p>
               <br></br>
-              <p>info@millermediapartners.com</p>
-              <p>919.229.9095</p>
+              <a href="mailto:info@millermediapartners.com"><p>info@millermediapartners.com</p></a>
+              <a href="tel:9192299095"><p>919.229.9095</p></a>
             </div>
           </div>
           <p style={{marginTop:'25px', marginBlockEnd:'0px'}}>©2020 Miller Media Partners LLC  | <a rel="noopenner" target="_blank" href="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3"> Privacy Policy </a></p>

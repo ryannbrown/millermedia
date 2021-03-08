@@ -48,12 +48,13 @@ export default class MobileFooter extends Component {
           </div>
           <div>
             <p>CONNECT WITH US</p>
-            <div className="social-wrapper">
-              <img src="https://static.wixstatic.com/media/23fd2a2be53141ed810f4d3dcdcd01fa.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/23fd2a2be53141ed810f4d3dcdcd01fa.webp"></img>
-              <img src="https://static.wixstatic.com/media/9c486556465843c5850fabfd68dfae49.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/9c486556465843c5850fabfd68dfae49.webp"></img>
-              <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img>
-              {/* <img src="https://static.wixstatic.com/media/81af6121f84c41a5b4391d7d37fce12a.png/v1/fill/w_19,h_19,al_c,q_85,usm_0.66_1.00_0.01/81af6121f84c41a5b4391d7d37fce12a.webp"></img> */}
-            </div>
+            <div className="social-footer-wrapper">
+              <a rel="noopenner" target="_blank" href="https://www.facebook.com/millermediapartners/"><i class="lni lni-facebook-filled"></i></a>
+              <a rel="noopenner" target="_blank" href=" https://www.pinterest.com/abbymillerdesignco/_created/"><i class="lni lni-pinterest"></i></a>
+              <a rel="noopenner" target="_blank" href="https://www.instagram.com/millermediapartners"><i class="lni lni-instagram"></i></a>
+              <a href="mailto:info@millermediapartners.com"><i class="lni lni-envelope"></i></a>
+                  
+              </div>
           </div>
           <div className="footer-wrapper">
             {/* <div>
@@ -111,7 +112,7 @@ export default class MobileFooter extends Component {
           
           target="_blank"
           to="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3"
-        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | Privacy Policy</p></Link>
+        > <p style={{paddingBottom: '15px'}}>©2020 Miller Media Partners LLC | <a rel="noopenner" target="_blank" href="https://app.termly.io/document/privacy-policy/fa9083e4-d940-438d-b974-bd27863aa8e3">Privacy Policy</a> </p></Link>
         </div>
       
       </div>

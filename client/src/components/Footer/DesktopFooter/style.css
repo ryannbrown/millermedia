@@ -82,7 +82,7 @@ margin:0px 5px;
 }
 
 .social-footer-wrapper i {
-  color:white;
+  color:white !important;
 }
 .social-footer-wrapper a:first-child {
 margin:0px 0px;
