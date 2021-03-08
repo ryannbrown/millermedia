@@ -78,7 +78,7 @@
 }
 .transparent-btn {
     font-size: 14px;
-    padding: 10px 30px;
+    padding: 10px 50px;
     border-radius: 0px;
     text-align: center;
     z-index: 100;
@@ -116,6 +116,15 @@ color:white;
 .blog-post h1 {
     font-weight:800;
     margin:10px 0px;
+}
+
+.blog-page a {
+    text-decoration: none;
+    color: inherit;
+    transition: .3s;
+}
+.connect-content a:hover, .connect-content a:hover {
+    opacity:.5;
 }
 
 .blog-list-box {

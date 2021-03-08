@@ -313,19 +313,20 @@ if (comments) {
                     sapien sodales, in mollis libero tempus. Praesent elementum
                     purus eros, et commodo dolor tincidunt facilisis.
                   </p>
-                  <button className="about-lead-btn">About MMP</button>
+                  <Link to="/about"><button className="transparent-btn">About MMP</button></Link>
                 </div>
                 <div className="blog-connect">
                   <div className="connect-content">
                     <h3>Connect</h3>
                     <div>
-                      <i class="lni lni-facebook-filled"></i>
-                      <i class="lni lni-pinterest"></i>
-                      <i class="lni lni-instagram"></i>
-                      <i class="lni lni-envelope"></i>
+                      <a rel="noopenner" target="_blank" href="https://www.facebook.com/millermediapartners/"><i class="lni lni-facebook-filled"></i></a>
+                      <a rel="noopenner" target="_blank" href=" https://www.pinterest.com/abbymillerdesignco/_created/"><i class="lni lni-pinterest"></i></a>
+                      <a rel="noopenner" target="_blank" href="https://www.instagram.com/millermediapartners"><i class="lni lni-instagram"></i></a>
+                      <a href="mailto:info@millermediapartners.com"><i class="lni lni-envelope"></i></a>
                     </div>
                   </div>
                 </div>
+               
                 {/* <div className="blog-search">
                           <h3>Looking for something?</h3>
                           <input placeholder="SEARCH THE BLOG"></input>
@@ -371,9 +372,11 @@ if (comments) {
                     ></input>
                   </div>
                   <div className="comment-message">
-                    <textarea required name="post" ref={register}></textarea>
+                    {itemPosted ? <p>Thanks for your comment!</p> : <textarea required name="post" ref={register}></textarea> }
+                    
                     <div>
-                    <input placeholder="Comment here..." className="dark-btn" type="submit" />
+                      {!itemPosted &&  <input placeholder="Comment here..." className="dark-btn" type="submit" /> }
+                   
                     </div>
                     {/* <button type="submit">Submit</button> */}
                   </div>
@@ -395,7 +398,9 @@ if (comments) {
       </div>
       <div className="comments-container">
         <h1 className="bold">Comments</h1>
-        <div className="comments-block">{blogComments}</div>
+        {comments.length > 0 ? <div className="comments-block">{blogComments}</div> :
+        <div><p>Be the first to leave a comment on this post!</p></div>}
+        
       </div>
       <Footer
         text="Want more info?"

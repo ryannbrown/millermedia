@@ -73,7 +73,9 @@ app.get("/api/reviews/:param", (req, res) => {
 app.post('/api/postreview', function (req, response) {
   console.log(req.body);
   const { blog_id, blog_title, review_body, name, email, website } = req.body;
-
+if (!name || !email || !review_body) {
+  response.status(400).json('credentials not entered')
+}
 
   db('reviews').insert([
     {

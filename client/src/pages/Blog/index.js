@@ -260,10 +260,10 @@ fetchData(cat);
                   <div className="connect-content">
                     <h3>Connect</h3>
                     <div>
-                    <i class="lni lni-facebook-filled"></i>
-                    <i class="lni lni-pinterest"></i>
-                    <i class="lni lni-instagram"></i>
-                    <i class="lni lni-envelope"></i>
+                    <a rel="noopenner" target="_blank" href="https://www.facebook.com/millermediapartners/"><i class="lni lni-facebook-filled"></i></a>
+                      <a rel="noopenner" target="_blank" href=" https://www.pinterest.com/abbymillerdesignco/_created/"><i class="lni lni-pinterest"></i></a>
+                      <a rel="noopenner" target="_blank" href="https://www.instagram.com/millermediapartners"><i class="lni lni-instagram"></i></a>
+                      <a href="mailto:info@millermediapartners.com"><i class="lni lni-envelope"></i></a>
                     </div>
                   </div>
                   </div>

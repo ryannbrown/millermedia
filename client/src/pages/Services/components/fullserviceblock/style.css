@@ -146,7 +146,11 @@ padding: 0px 25px;
 }
 
 .hourly-work p {
-    margin:0px;
+    margin:5px 0px;
+}
+
+.hourly-work button {
+    margin-top:15px;
 }
 
 .hourly-work .btn {

@@ -17,7 +17,7 @@ export default class HomeQuote extends Component {
   
       return (
       
-      <div className="quote-block tc">
+      <div className="quote-block animate__animated animate__fadeInLeft tc">
             {/* <div className="vertical-line"></div> */}
           <h3>"{this.props.text}"</h3>
           <p><i>{this.props.author}</i></p>

@@ -38,8 +38,8 @@ export default class HomeAbout extends Component {
         }}></div>
          <div className="about-text">
          <div className="vertical-line"></div>
-         <div className="about-text-box">
-             <h2>Working Together</h2>
+         <div className="about-text-box ">
+             <h2 className="animate__animated animate__fadeInRight">Working Together</h2>
              <p>At Miller Media Partners, your goals are our goals, and we reflect that in our flexible pricing options and unique strategies.</p>
              <p>Whether you're looking for full-service advertising or a standalone design package, we will work <i><strong>with</strong></i> you to achieve mutual success.</p>
              <p>So, what makes us different?</p>

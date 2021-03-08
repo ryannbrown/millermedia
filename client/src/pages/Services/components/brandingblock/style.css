@@ -56,6 +56,11 @@ flex-wrap:wrap;
     padding:10px;
 }
 
+.branding-package button {
+    min-width: 150px;
+    margin: 5px auto;
+}
+
 .branding-package p {
     width:75%;
     margin:10px auto;

@@ -76,6 +76,20 @@ justify-content: space-between;
 align-items: flex-start;
 }
 
+
+.social-footer-wrapper a {
+margin:0px 5px;
+}
+
+.social-footer-wrapper i {
+  color:white;
+}
+.social-footer-wrapper a:first-child {
+margin:0px 0px;
+margin-right:5px;
+/* color:red; */
+}
+
 .footer-wrapper div {
   margin:10px;
   text-align: left;
