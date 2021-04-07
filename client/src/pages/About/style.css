@@ -14,6 +14,7 @@
   justify-content: center;
   margin: 50px auto;
   max-width: 800px;
+
 }
 
 .about-item {
@@ -29,7 +30,7 @@
 } */
 
 .flex-wrapper hr {
-  border: 2px solid rgb(210, 158, 17, 0.55);;
+  border: 1px solid rgb(210, 158, 17, 0.55);;
   /* height: 90px; */
   margin-top: 2%;
   transform: rotate(90deg);
@@ -136,6 +137,17 @@
     .about-stamp-img {
       left: 5%;
     }
+
+    .flex-wrapper {
+        height:20vh;
+        align-items:center;
+    }
+    .flex-wrapper hr {
+      width:120px;
+    }
+    .flex-item {
+      flex: 0 0 19% !important;
+    }
   }
 
   @media (min-width: 1200px) {
@@ -149,7 +161,7 @@
   .about-stamp-img {
     transform: rotate(-25deg);
     position: absolute;
-    left: 25%;
+    left: 20%;
     top: -60px;
     z-index: 500;
     width: 120px;
@@ -263,7 +275,7 @@
     flex-direction: column;
   }
   .flex-wrapper hr {
-    border: 2px solid rgb(210, 158, 17, 0.55);;
+    border: 1px solid rgb(210, 158, 17, 0.55);;
     /* height: 90px; */
     margin-top: 2%;
     transform: rotate(0deg);

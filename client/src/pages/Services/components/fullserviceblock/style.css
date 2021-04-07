@@ -142,11 +142,11 @@ padding: 0px 25px;
 }
 
 .hourly-work h2 {
-    padding:25px;
+    margin-bottom:25px;
 }
 
 .hourly-work p {
-    margin:5px 0px;
+    margin:0px 0px;
 }
 
 .hourly-work button {

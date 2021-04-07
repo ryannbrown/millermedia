@@ -25,7 +25,7 @@
   height: 400px;
   width: 20px;
   right: 0%;
-  z-index: 600;
+  /* z-index: 600; */
   top: -200px;
 }
 .ppc-vertical-line-1 {

@@ -10,6 +10,10 @@
     text-align: center;
   }
 
+  .branding-text * {
+      margin:35px 0px;
+  }
+
   .branding-text .about-lead-btn {
 margin-top:25px;
   }
@@ -58,7 +62,7 @@ flex-wrap:wrap;
 
 .branding-package button {
     min-width: 150px;
-    margin: 5px auto;
+    margin: 25px auto;
 }
 
 .branding-package p {

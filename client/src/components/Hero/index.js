@@ -40,7 +40,7 @@ export default class ServicesHero extends Component {
     }
 
     scrollDown = () => {
-      window.scrollTo(0, 850)
+      window.scrollTo(0, 625)
     }
   
     componentDidUpdate() {
