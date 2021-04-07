@@ -1,6 +1,14 @@
 .connect-form {
-    text-align:center !important;
+    text-align:left;
     color:rgba(210, 158, 17, 1);
+}
+
+.blog-page .connect-form {
+    text-align:center;
+}
+
+.blog-page .connect-form button {
+    margin-top:25px;
 }
 
 
@@ -19,12 +27,15 @@
 
 .connect-page .home-wrapper > p {
     padding:50px;
+    width: 750px;
+    margin: 0px auto;
 }
 
 .form-container {
     border-right:2px solid rgb(210, 158, 17, 0.55) !important;
     padding: 75px;
     min-width: 50%;
+    font-family:'Cormorant Garamond';
 }
 
 
@@ -34,6 +45,9 @@
 }
 
 @media (max-width:768px) {
+    .connect-page .home-wrapper > p {
+        width:100%;
+    }
     .form-container {
         padding: 0px;
         width: 75%;

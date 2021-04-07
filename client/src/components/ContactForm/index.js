@@ -138,7 +138,7 @@ export default class ContactForm extends Component {
               placeholder="Type your message here..."
             />
           </Form.Group>
-          <Button type="submit" className="about-lead-btn" variant="outline-dark">SUBMIT</Button>
+          <Button type="submit" className="transparent-btn" variant="outline-dark">SUBMIT</Button>
         </form>
         {itemPosted ? (
           <div className="toasty">

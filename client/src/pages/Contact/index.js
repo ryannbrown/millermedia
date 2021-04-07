@@ -83,12 +83,12 @@ export default class Contact extends Component {
             <ContactForms></ContactForms>
             <div className="info-hours">
               <div className="info">
-                <h3>Contact Info</h3>
+                <h6>Contact Info</h6>
                 <p>info@millermediapartners.com </p>
                 <p>919.229.9095</p>
               </div>
               <div className="hours">
-                <h3>Hours of Operation</h3>
+                <h6>Hours of Operation</h6>
                 <p>Monday - Friday</p>
                 <p>8am-4pm</p>
               </div>
